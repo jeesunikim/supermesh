@@ -3,10 +3,10 @@
 
     angular
         .module('sm.session')
-        .controller('Session', Session);
+        .controller('sessionCtrl', sessionCtrl);
 
     /* @ngInject */
-    function Session() {
+    function sessionCtrl($scope) {
 //         /*jshint validthis: true */
 //         var vm = this;
 //         vm.avengers = [];

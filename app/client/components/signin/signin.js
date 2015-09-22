@@ -3,10 +3,10 @@
 
     angular
         .module('sm.signin')
-        .controller('SignIn', SignIn);
+        .controller('signInCtrl', signInCtrl);
 
     /* @ngInject */
-    function SignIn() {
+    function signInCtrl() {
 //         /*jshint validthis: true */
 //         var vm = this;
 //         vm.avengers = [];
