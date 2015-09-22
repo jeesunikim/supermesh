@@ -52,18 +52,20 @@ gulp.task('buildCSS', function () {
         .pipe(gulp.dest('./dist/css/'));
 });
 
-gulp.task('default', function () {
+gulp.task('watch', function () {
 
     livereload.listen();
     
-    gulp.watch('app/client/**', function () {
+    gulp.watch('app/client/**/*.js', function () {
         runSeq('buildJS', 'reload');
     });
 
-     gulp.watch('src/scss/**', function () {
+     gulp.watch('src/scss/**/*.scss', function () {
         runSeq('buildCSS', 'reloadCSS');
     });
 
     gulp.watch('app/server/**/*.js', ['lintJS']); 
 
 });
+
+gulp.task('default', ['watch']);
