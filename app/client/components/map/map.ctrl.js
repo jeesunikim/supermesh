@@ -2,11 +2,11 @@
     'use strict';
 
     angular
-        .module('sm.chat')
-        .controller('Chat', Chat);
+        .module('sm.map')
+        .controller('mapCtrl', mapCtrl);
 
     /* @ngInject */
-    function Chat() {
+    function mapCtrl($scope) {
 //         /*jshint validthis: true */
 //         var vm = this;
 //         vm.avengers = [];
