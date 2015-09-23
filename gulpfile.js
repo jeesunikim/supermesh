@@ -20,12 +20,6 @@ gulp.task('reloadCSS', function () {
     return gulp.src('./dist/css/style.min.css').pipe(livereload());
 });
 
-// gulp.task('compress', function() {
-// 	gulp.src('./src/js/**/*.js')
-// 	.pipe(uglify())
-// 	.pipe(gulp.dest('./dist/js'));
-// })
-
 gulp.task('lintJS', function () {
     return gulp.src(['./app/client/components/**/*.js', './server/**/*.js'])
         .pipe(eslint())
@@ -42,12 +36,22 @@ gulp.task('buildJS', ['lintJS'], function () {
         .pipe(gulp.dest('./dist/js'));
 });
 
+gulp.task('vendorJS', ['lintJS'], function () {
+    return gulp.src(['./src/vendor/angular.js', './src/vendor/*.js'])
+        .pipe(plumber())
+        .pipe(sourcemaps.init())
+        .pipe(concat('vendor.js'))
+        .pipe(sourcemaps.write())
+        .pipe(gulp.dest('./dist/vendor'));
+});
+
 // Sass Compiled and Minify
 gulp.task('buildCSS', function () {
-    return gulp.src('./src/scss/style.scss')
+    return gulp.src('./src/scss/**/*.scss')
         .pipe(sass({
             errLogToConsole: true
         }))
+        .pipe(sass({outputStyle: 'compressed'}))
         .pipe(rename('style.min.css'))
         .pipe(gulp.dest('./dist/css/'));
 });
@@ -56,8 +60,12 @@ gulp.task('watch', function () {
 
     livereload.listen();
     
-    gulp.watch('app/client/**/*.js', function () {
+    gulp.watch('src/client/**/*.js', function () {
         runSeq('buildJS', 'reload');
+    });
+
+    gulp.watch('src/vendor/*.js', function () {
+        runSeq('vendorJS', 'reload');
     });
 
      gulp.watch('src/scss/**/*.scss', function () {
