@@ -31,7 +31,7 @@ supermesh
       ├── /img
     ├── /js
     ├── /scss
-      └── /vendor (library)
+    └── /vendor (library)
 ```
 
 ## Models
