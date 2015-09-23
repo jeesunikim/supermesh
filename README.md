@@ -28,7 +28,7 @@ supermesh
 │   ├── /img
 │   └── /js
 └── /src
-      ├── /img
+    ├── /img
     ├── /js
     ├── /scss
     └── /vendor (library)
