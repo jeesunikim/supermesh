@@ -6,7 +6,7 @@ var mongoose = require('mongoose'),
 	// participants
 	// speakers
 
-var db = require ('../')
+var db = require ('../db');
 
 var Session = new mongoose.Schema({
 	_id: {
@@ -34,3 +34,5 @@ var Session = new mongoose.Schema({
 		ref: 'Participants'
 	}
 });
+
+module.exports = db.model('Session', Session);

@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "nodemon ./start.js"
+    "start": "nodemon ./app/server/start.js"
   },
   "dependencies": {
     "bluebird": "^2.10.1",
@@ -29,6 +29,7 @@
     "mongoose": "^4.1.8",
     "morgan": "~1.6.1",
     "run-sequence": "^1.1.3",
+    "serve-favicon": "^2.3.0",
     "shortid": "^2.2.2"
   }
 }
