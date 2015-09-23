@@ -1,7 +1,7 @@
 'use strict';
 
 var chalk = require('chalk'),
-    app = require('./app'),
+    app = require('./routes/configure/'),
     db = require('./db/db');
 
 var server = require('http').createServer();
