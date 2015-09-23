@@ -1,19 +1,22 @@
 'use strict';
+var chalk = require('chalk'),
+	mongoose = require('mongoose'),
+	Promise = require('bluebird'); 
 
-var mongoose = require('mongoose');
-var Promise = require('bluebird'); 
-Promise.promisifyAll(mongoose);
+require('./models');
 
 var databaseURI = 'mongodb://localhost:27017/supermesh';
 
 var db = mongoose.connect(databaseURI).connection;
 
-db.on('open', function () {
-	console.log('Database connection successfully opened');
+var startDbPromise = new Promise(function (resolve, reject) {
+	db.on('open', resolve);
+	db.on('error', reject);
 });
 
-db.on('error', function (err) {
-	console.error('Database connection error', err);
+console.log(chalk.yellow('Opening connection to MongoDB . . .'));
+startDbPromise.then(function () {
+    console.log(chalk.green('MongoDB connection opened!'));
 });
 
-module.exports = db;
+module.exports = startDbPromise;

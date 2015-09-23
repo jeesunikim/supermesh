@@ -1,104 +1,25 @@
 'use strict';
 
-var app = require('./app'),
+var chalk = require('chalk'),
+    app = require('./app'),
     db = require('./db/db');
 
-var port = 7777;
-var server = app.listen(port, function () {
-    console.log('HTTP server patiently listening on port', port);
+var server = require('http').createServer();
+
+var createApplication = function() {
+    server.on('request', app); // Attach the Express Application
+    // require('./io')(server); //Attach socket.io
+};
+
+var startServer = function () {
+        var port = 7777;
+        server.listen(port, function() {
+            console.log(chalk.blue('Server started on port', chalk.magenta(port)));
+        });
+};
+
+db.then(createApplication).then(startServer).catch(function(err) {
+    console.error('Initialization error:', chalk.red(err.message));
+    console.error('Process terminating . . .');
+    process.kill(1);
 });
-
-module.exports = server;
-
-
-// #!/usr/bin/env node
-
-// /**
-//  * Module dependencies.
-//  */
-
-// var app = require('./app'),
-//     db = require('./db/db')
-// var debug = require('debug')('superdesk:server');
-// var http = require('http');
-
-// /**
-//  * Get port from environment and store in Express.
-//  */
-
-// var port = normalizePort(process.env.PORT || '3000');
-// app.set('port', port);
-
-// /**
-//  * Create HTTP server.
-//  */
-
-// var server = http.createServer(app);
-
-// /**
-//  * Listen on provided port, on all network interfaces.
-//  */
-
-// server.listen(port);
-// server.on('error', onError);
-// server.on('listening', onListening);
-
-// /**
-//  * Normalize a port into a number, string, or false.
-//  */
-
-// function normalizePort(val) {
-//   var port = parseInt(val, 10);
-
-//   if (isNaN(port)) {
-//     // named pipe
-//     return val;
-//   }
-
-//   if (port >= 0) {
-//     // port number
-//     return port;
-//   }
-
-//   return false;
-// }
-
-// /**
-//  * Event listener for HTTP server "error" event.
-//  */
-
-// function onError(error) {
-//   if (error.syscall !== 'listen') {
-//     throw error;
-//   }
-
-//   var bind = typeof port === 'string'
-//     ? 'Pipe ' + port
-//     : 'Port ' + port;
-
-//   // handle specific listen errors with friendly messages
-//   switch (error.code) {
-//     case 'EACCES':
-//       console.error(bind + ' requires elevated privileges');
-//       process.exit(1);
-//       break;
-//     case 'EADDRINUSE':
-//       console.error(bind + ' is already in use');
-//       process.exit(1);
-//       break;
-//     default:
-//       throw error;
-//   }
-// }
-
-// /**
-//  * Event listener for HTTP server "listening" event.
-//  */
-
-// function onListening() {
-//   var addr = server.address();
-//   var bind = typeof addr === 'string'
-//     ? 'pipe ' + addr
-//     : 'port ' + addr.port;
-//   debug('Listening on ' + bind);
-// }

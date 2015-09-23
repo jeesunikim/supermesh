@@ -11,6 +11,7 @@ var db = require ('../db');
 var Session = new mongoose.Schema({
 	_id: {
 		type: String,
+		unique: true,
 		default: shortid.generate
 	},
 	name: String,
@@ -35,4 +36,4 @@ var Session = new mongoose.Schema({
 	}
 });
 
-module.exports = db.model('Session', Session);
+mongoose.model('Session', Session);
