@@ -1,7 +1,7 @@
 # super-mesh
 
 ## Folder Structure
-
+```
 supermesh
 ├── /app
 │   ├── /client (angular components / index.html)
@@ -32,7 +32,8 @@ supermesh
     ├── /js
     ├── /scss
       └── /vendor (library)
-      
+```
+
 ## Models
 
 ### Event Model
