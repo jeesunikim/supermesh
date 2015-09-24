@@ -9,7 +9,8 @@ var gulp = require('gulp'),
 	plumber = require('gulp-plumber'),
 	sourcemaps = require('gulp-sourcemaps'),
 	eslint = require('gulp-eslint'),
-	rename = require('gulp-rename');
+	rename = require('gulp-rename'),
+    angularFilesort = require('gulp-angular-filesort');
 
 // Live reload CSS
 gulp.task('reload', function () {
@@ -28,7 +29,8 @@ gulp.task('lintJS', function () {
 });
 
 gulp.task('buildJS', ['lintJS'], function () {
-    return gulp.src(['./app/client/components/sm.module.js', './app/client/components/**/*.js'])
+    return gulp.src('./app/client/components/**/*.js')
+        .pipe(angularFilesort())
         .pipe(plumber())
         .pipe(sourcemaps.init())
         .pipe(concat('main.js'))
@@ -37,7 +39,8 @@ gulp.task('buildJS', ['lintJS'], function () {
 });
 
 gulp.task('vendorJS', ['lintJS'], function () {
-    return gulp.src(['./src/vendor/angular.js', './src/vendor/*.js'])
+    return gulp.src('./src/vendor/*.js')
+        .pipe(angularFilesort())
         .pipe(plumber())
         .pipe(sourcemaps.init())
         .pipe(concat('vendor.js'))
@@ -60,7 +63,7 @@ gulp.task('watch', function () {
 
     livereload.listen();
     
-    gulp.watch('src/client/**/*.js', function () {
+    gulp.watch('app/client/**/*.js', function () {
         runSeq('buildJS', 'reload');
     });
 
@@ -76,4 +79,4 @@ gulp.task('watch', function () {
 
 });
 
-gulp.task('default', ['watch']);
+gulp.task('default', ['lintJS', 'buildJS', 'vendorJS', 'buildCSS', 'watch']);
