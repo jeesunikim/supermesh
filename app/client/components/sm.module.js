@@ -7,7 +7,7 @@
          * 3rd party libraries
          */
 
-        //'firebase',
+        'ui-router',
         
         /*
          * Order is not important. Angular makes a
