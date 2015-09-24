@@ -2,12 +2,6 @@
     'use strict';
 
     angular.module('sm', [
-
-        /*
-         * 3rd party libraries
-         */
-
-        'ui-router',
         
         /*
          * Order is not important. Angular makes a
@@ -15,6 +9,13 @@
          * and then when app.dashboard tries to use app.data,
          * its components are available.
          */
+         
+         /*
+         * 3rd party libraries
+         */
+
+        'ui.router',
+        'firebase',
 
         /*
          * Everybody has access to these.
@@ -31,6 +32,7 @@
         'sm.chat',
         'sm.map',
         'sm.session'
+        
     ]);
 
 })();
