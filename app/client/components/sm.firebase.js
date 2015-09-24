@@ -1,7 +1,7 @@
 (function() {
     'use strict';
 
-    angular
-    	.constant('FIREBASE_URI', 'https://blinding-torch-1380.firebaseio.com/');
+    angular.module('sm.firebase',[])
+    	.constant('FIREBASE_URI', 'https://luminous-inferno-640.firebaseio.com');
 
 })();

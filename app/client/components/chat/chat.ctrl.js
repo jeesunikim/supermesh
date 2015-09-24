@@ -7,6 +7,9 @@
 
     /* @ngInject */
     function chatCtrl($scope) {
+
+        $scope.fire="hello";
+
 //         /*jshint validthis: true */
 //         var vm = this;
 //         vm.avengers = [];
