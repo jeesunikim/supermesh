@@ -7,7 +7,7 @@
          * 3rd party libraries
          */
 
-        'ui-router',
+        'ui.router',
         
         /*
          * Order is not important. Angular makes a
