@@ -6,7 +6,7 @@
         .factory('dataservice', dataservice);
 
     /* @ngInject */
-    // function dataservice() {
+    function dataservice() {
     //     var isPrimed = false;
     //     var primePromise;
 
@@ -84,5 +84,5 @@
     //             .catch(exception.catcher('"ready" function failed'));
     //     }
 
-    // }
+    }
 })();

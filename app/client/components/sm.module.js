@@ -2,6 +2,13 @@
     'use strict';
 
     angular.module('sm', [
+
+        /*
+         * 3rd party libraries
+         */
+
+        //'firebase',
+        
         /*
          * Order is not important. Angular makes a
          * pass to register all of the modules listed
