@@ -3,12 +3,24 @@
 
     angular
         .module('sm.chat')
+        .constant('FIREBASE_URI', 'https://luminous-inferno-640.firebaseio.com')
         .controller('chatCtrl', chatCtrl);
 
     /* @ngInject */
-    function chatCtrl($scope) {
+    function chatCtrl($scope, $firebaseObject,$firebaseArray, FIREBASE_URI) {
 
         $scope.fire="hello";
+        var ref = new Firebase (FIREBASE_URI);
+
+        $scope.messages =$firebaseArray(ref);
+
+        $scope.addMessage = function(){
+            $scope.messages.$add({
+                text:$scope.newMessageText
+            });
+        };
+
+        console.log($firebaseObject)
 
 //         /*jshint validthis: true */
 //         var vm = this;

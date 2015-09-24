@@ -1,2 +1,11 @@
-<h2>{{fire}}</h2>
-<h2>below the interpolation</h2>
+<h2>Welcome to Session</h2>
+<li ng-repeat="message in messages">
+    {{message.text}}
+
+    <button ng-click="messages.$remove(message)">Delete</button>
+
+</li>
+<form ng-submit ="addMessage()">
+    <input ng-model ="newMessageText" />
+    <button type="submit">Send</button>
+</form>

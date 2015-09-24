@@ -15,7 +15,7 @@
          */
 
         'ui.router',
-        'sm.firebase',
+        'firebase',
 
         /*
          * Everybody has access to these.
