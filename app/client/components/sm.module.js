@@ -29,10 +29,10 @@
          * Feature areas
          */
          
+        'sm.cc',
         'sm.chat',
-        'sm.map',
-        'sm.session'
-        
+        'sm.session',
+        'sm.schedule'
     ]);
 
 })();
