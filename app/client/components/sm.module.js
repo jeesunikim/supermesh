@@ -7,7 +7,7 @@
          * 3rd party libraries
          */
 
-        'ui-router',
+        'ui.router',
         
         /*
          * Order is not important. Angular makes a
@@ -28,9 +28,10 @@
          * Feature areas
          */
          
+        'sm.cc',
         'sm.chat',
-        'sm.map',
-        'sm.session'
+        'sm.session',
+        'sm.schedule'
     ]);
 
 })();

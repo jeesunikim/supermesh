@@ -8,7 +8,6 @@ var router = require('express').Router(),
 	router.use(cookieParser());
 
     // Parse our POST and PUT bodies.
-    router.use(bodyParser({limit: '50mb'}));
     router.use(bodyParser.json());
     router.use(bodyParser.urlencoded({ extended: true }));
     router.use(logger('dev'));
