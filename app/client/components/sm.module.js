@@ -16,8 +16,6 @@
          * its components are available.
          */
 
-         'ui.router',
-
         /*
          * Everybody has access to these.
          * We could place these under every feature area,
@@ -30,9 +28,10 @@
          * Feature areas
          */
          
+        'sm.cc',
         'sm.chat',
-        'sm.map',
-        'sm.session'
+        'sm.session',
+        'sm.schedule'
     ]);
 
 })();
