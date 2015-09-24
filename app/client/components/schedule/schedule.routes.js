@@ -11,7 +11,7 @@
 		function getStates(){
 			return [
 				{
-					state: '/schedule',
+					state: 'schedule',
 					config: {
 						url: '/',
 						templateUrl: 'client/components/schedule/schedule.html'
