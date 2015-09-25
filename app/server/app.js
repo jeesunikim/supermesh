@@ -6,17 +6,8 @@ var session = require('express-session');
 
 require('./routes/configure')(app);
 
-app.use('/api', require('./routes'));
-app.use(session({secret: 'session secret key'}));
-
-// view engine setup
-// app.set('views', path.join(__dirname, 'views'));
-
-// app.use(express.static(path.join(__dirname, '../../dist')));
-
-app.use('/*', function(req, res){
-  res.sendFile(app.get('indexHTMLPath'));
-});
+// app.use('/api', require('./routes'));
+// app.use(session({secret: 'session secret key'}));
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

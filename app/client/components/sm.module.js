@@ -13,6 +13,7 @@
          */ 
          
         'sm.core',
+        'sm.router',
 
         /*
          * Feature areas
