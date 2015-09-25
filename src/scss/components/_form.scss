@@ -1,7 +1,7 @@
 input[type="text"] {
 	background-color: $Transparent;
 	color: #C0BFBE;
-	cursor: default;
+	cursor: text;
 	margin: .5em auto;
 	/*padding: 10px 40px;*/
 	width: 194px;
@@ -10,6 +10,24 @@ input[type="text"] {
 	outline: none;
 	display: block;
 }
+
+.inner-addon {
+	position: relative;
+}
+
+.inner-addon .glyphicon {
+  position: absolute;
+  padding: 10px;
+  pointer-events: none;
+}
+
+/* align icon */
+.left-addon .glyphicon  { left:  0px;}
+.right-addon .glyphicon { right: 0px;}
+
+/* add padding  */
+.left-addon input  { padding-left:  30px; }
+.right-addon input { padding-right: 30px; }
 
 .customBtn {
 	display: block;
@@ -22,6 +40,7 @@ input[type="text"] {
 	color: $Default;
 	outline: none;
 	cursor: pointer;
+	transition: all 0.3s ease;
 }
 
 .customBtn:hover {

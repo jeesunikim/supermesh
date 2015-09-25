@@ -4,7 +4,10 @@
 	</div>
 	<div class="Signin-form">
 		<form name="signin" ng-submit="submitForm()" novalidate>
-			<input type="text" name="name">
+			<div class="inner-addon left-addon">
+			    <i class="glyphicon glyphicon-user"></i>
+			    <input type="text" name="name" placeholder="name">
+			</div>
 			<input type="text" name="phone number">
 			<button class="customBtn" type="submit">Create an Event</button>
 		</form>
