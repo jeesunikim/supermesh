@@ -22,7 +22,8 @@
         'sm.cc',
         'sm.chat',
         'sm.session',
-        'sm.schedule'
+        'sm.schedule',
+        'sm.signin'
     ]);
 
 })();
