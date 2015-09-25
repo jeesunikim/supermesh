@@ -1,4 +1,4 @@
 (function () {
-'use strict';
-	angular.module('sm.schedule',[]);
+	'use strict';
+	angular.module('sm.schedule', []);
 })();
