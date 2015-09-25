@@ -1,0 +1,30 @@
+input[type="text"] {
+	background-color: $Transparent;
+	color: #C0BFBE;
+	cursor: default;
+	margin: .5em auto;
+	/*padding: 10px 40px;*/
+	width: 194px;
+	height: 30px;
+	border: 1px solid;
+	outline: none;
+	display: block;
+}
+
+.customBtn {
+	display: block;
+	margin: .5em 0;
+	width: 198px;
+	height: 40px;
+	margin: 0 auto;
+	background: transparent;
+	border: 1px solid $Default;
+	color: $Default;
+	outline: none;
+	cursor: pointer;
+}
+
+.customBtn:hover {
+	background: $Default;
+	color: $Black;
+}
