@@ -4,6 +4,8 @@
 		.module('sm.admin')
 		.controller('AdminController', AdminController);
 
+		AdminController.$inject = ['$scope', '$firebaseArray', 'FIREBASE_URI'];
+
 		function AdminController($scope, $firebaseArray, FIREBASE_URI){
 			var eventRef = new Firebase(FIREBASE_URI + 'Session');
 			

@@ -19,11 +19,8 @@
 						controller: 'SessionController',
 						templateUrl: 'client/components/session/view/session.view.html',
 						resolve: {
-							session: function($stateParams) {
-								// Should return all information concerning a particular session w/ some get function
-								return {
-									id: $stateParams.id
-								}
+							sessionID: function($stateParams) {
+								return $stateParams.id;
 							}
 						}
 					}

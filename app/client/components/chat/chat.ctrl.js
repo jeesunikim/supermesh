@@ -3,17 +3,19 @@
 
     angular
         .module('sm.chat')
-        .constant('FIREBASE_URI', 'https://luminous-inferno-640.firebaseio.com/')
         .controller('chatCtrl', chatCtrl);
+
+    chatCtrl.$inject = ['$scope', '$firebaseObject','$firebaseArray', 'FIREBASE_URI']
 
     /* @ngInject */
     function chatCtrl($scope, $firebaseObject,$firebaseArray, FIREBASE_URI) {
 
         // Create a new firebase reference
-        var chatRef = new Firebase (FIREBASE_URI +"Messages");
-        var userRef = new Firebase (FIREBASE_URI +"Users");
+        var chatRef = new Firebase (FIREBASE_URI + 'Session' + '/' + $scope.sessionID + '/' + "Messages");
+        var userRef = new Firebase (FIREBASE_URI + 'Session' + '/' + $scope.sessionID + '/' + "Users");
 
-
+        // var sessionRef = new Firebase(FIREBASE_URI + 'Session' + '/' + sessionID);
+        
         $scope.user = 0;
         //create anon user with uid and limit session to browser open only.
         $scope.authAnonUser= function(username){
