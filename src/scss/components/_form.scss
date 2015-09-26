@@ -3,7 +3,7 @@ input[type="text"] {
 	color: #C0BFBE;
 	cursor: text;
 	margin: .5em auto;
-	/*padding: 10px 40px;*/
+	// padding-left: 10px;
 	width: 194px;
 	height: 30px;
 	border: 1px solid;
@@ -13,12 +13,15 @@ input[type="text"] {
 
 .inner-addon {
 	position: relative;
+	width: 247px;
+	margin: 0 auto;
 }
 
 .inner-addon .glyphicon {
   position: absolute;
   padding: 10px;
   pointer-events: none;
+  color: $Default;
 }
 
 /* align icon */
@@ -26,13 +29,12 @@ input[type="text"] {
 .right-addon .glyphicon { right: 0px;}
 
 /* add padding  */
-// .left-addon input  { padding-left:  30px; }
-// .right-addon input { padding-right: 30px; }
+.left-addon input  { padding-left: 50px; }
 
 .customBtn {
 	display: block;
 	margin: .5em 0;
-	width: 198px;
+	width: 247px;
 	height: 40px;
 	margin: 0 auto;
 	background: transparent;
