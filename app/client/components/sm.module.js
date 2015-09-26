@@ -2,8 +2,9 @@
     'use strict';
 
     angular.module('sm', [
-        
+
         'ui.router',
+        'firebase',
 
         /*
          * Order is not important.
@@ -19,6 +20,7 @@
          * Feature areas
          */
          
+        'sm.admin',
         'sm.cc',
         'sm.chat',
         'sm.session',

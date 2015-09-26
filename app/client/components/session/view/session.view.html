@@ -1,13 +1,5 @@
 <div class="session-header">
-	<div>Title</div>
-	<div>Speaker</div>
-	<div>{{session}}</div>
+	<div>Title: {{session.name}}</div>
+	<div>Speaker: {{session.presenter}}</div>
 </div>
-
-<div class="session-chat">
-	<ul>
-		<li ng-repeat="message in chat">
-			<div chat-tile class="chat-tile"></div>
-		</li>
-	</ul>
-</div>
+<chat_module></chat_module>

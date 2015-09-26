@@ -1,0 +1,22 @@
+<h2>Welcome to Session Chat</h2>
+
+<div ng-show="!user" class='chat-toolbar'>
+    <form ng-submit="authAnonUser(username)">
+        <label for="nameInput">Username:</label>
+        <input type='text' ng-model ='username' placeholder='enter a username...'>
+        <button type="submit">Join</button>
+    </form>
+</div>
+
+<li ng-repeat="message in messages">
+    {{message.text}}
+    {{message.name}}
+    {{formatTime(message.time)}}
+
+    <button ng-click="messages.$remove(message)">Delete</button>
+
+</li>
+<form ng-show="user" ng-show="authAnonUser"  ng-submit ="addMessage()">
+    <input ng-model ="newMessageText" />
+    <button type="submit">Send</button>
+</form>
