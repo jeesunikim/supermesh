@@ -2,8 +2,9 @@
     'use strict';
 
     angular.module('sm', [
-        
+
         'ui.router',
+        'firebase',
 
         /*
          * Order is not important.
