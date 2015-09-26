@@ -16,6 +16,7 @@ body{
 	background-image: -webkit-gradient(radial, center center, 0, center center, 140, color-stop(0, #40403F), color-stop(1, #2D2D2D));
 	background-image: -webkit-radial-gradient(center, ellipse cover, #40403F 0%, #2D2D2D 100%);
 	background-image: radial-gradient(ellipse cover at center, #40403F 0%, #2D2D2D 100%);
+	font-family: $Lato;
 }
 
 a {
@@ -28,7 +29,7 @@ ul, menu, dir {
 }
 
 .right {
-	right: 0;
+	right: 5px;
 	position: absolute;
 	top: 50%;
 	transform: translateY(-50%);
