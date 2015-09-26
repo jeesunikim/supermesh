@@ -1,0 +1,36 @@
+.Admin {
+	&-section {
+		background-color: $Default;
+		color: $Black;
+		padding: 20px 0;
+		text-transform: uppercase;
+		text-align: center;
+		font-size: $Subheadline;
+		font-family: $Lato;
+		margin: 1em 0;
+		position: relative;
+	}
+	&-top {
+		margin-top:0;
+	}
+	&-session {
+		li {
+			// border-bottom: 1px solid $Default;
+			border-left: 2px solid $White;
+			padding: 15px 5px 15px 10px;
+			margin-bottom: 5px;
+			box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .4);
+			position: relative;
+		}
+		span {
+			color: $White;
+		}
+	}
+	.presenter {
+		font-size: 11px;
+		display: block;
+		color: $Blue;
+		line-height:2em;
+	}
+	margin-bottom: 2em;
+}

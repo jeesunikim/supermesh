@@ -2,8 +2,8 @@ input[type="text"] {
 	background-color: $Transparent;
 	color: #C0BFBE;
 	cursor: text;
-	margin: .5em auto;
-	// padding-left: 10px;
+	margin: 1.25em auto;
+	padding-left: 10px;
 	width: 194px;
 	height: 30px;
 	border: 1px solid;
@@ -34,18 +34,25 @@ input[type="text"] {
 .customBtn {
 	display: block;
 	margin: .5em 0;
-	width: 247px;
 	height: 40px;
 	margin: 0 auto;
-	background: transparent;
+	background: $Default;
 	border: 1px solid $Default;
-	color: $Default;
+	color: $Black;
 	outline: none;
 	cursor: pointer;
 	transition: all 0.3s ease;
+	width: 207px;
+	&-index {
+		width: 247px;
+	}
 }
 
 .customBtn:hover {
-	background: $Default;
-	color: $Black;
+	background: transparent;
+	color: $Default;
+}
+
+button {
+	text-transform: uppercase;
 }
