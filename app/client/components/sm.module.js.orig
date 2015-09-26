@@ -2,9 +2,26 @@
     'use strict';
 
     angular.module('sm', [
+<<<<<<< HEAD
+        
+        /*
+         * Order is not important. Angular makes a
+         * pass to register all of the modules listed
+         * and then when app.dashboard tries to use app.data,
+         * its components are available.
+         */
+         
+         /*
+         * 3rd party libraries
+         */
+
+        'ui.router',
+        'sm.firebase',
+=======
 
         'ui.router',
         'firebase',
+>>>>>>> eda72a7c2ff746e382d0e60ff076b66acdd92971
 
         /*
          * Order is not important.

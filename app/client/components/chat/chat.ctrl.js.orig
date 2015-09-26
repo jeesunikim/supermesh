@@ -8,6 +8,11 @@
     chatCtrl.$inject = ['$scope', '$firebaseObject','$firebaseArray', 'FIREBASE_URI']
 
     /* @ngInject */
+<<<<<<< HEAD
+    function chatCtrl($scope) {
+
+        $scope.fire="hello";
+=======
     function chatCtrl($scope, $firebaseObject,$firebaseArray, FIREBASE_URI) {
 
         // Create a new firebase reference
@@ -71,6 +76,7 @@
 
         });
 
+>>>>>>> eda72a7c2ff746e382d0e60ff076b66acdd92971
 
 //         /*jshint validthis: true */
 //         var vm = this;

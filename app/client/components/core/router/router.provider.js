@@ -1,8 +1,8 @@
-(function() {
+(function () {
     'use strict';
 
     angular
-        .module('sm.core')
+        .module('sm.router')
         .provider('routerHelper', routerHelperProvider);
 
         routerHelperProvider.$inject = ['$locationProvider', '$stateProvider', '$urlRouterProvider'];

@@ -22,7 +22,7 @@ gulp.task('reloadCSS', function () {
 });
 
 gulp.task('lintJS', function () {
-    return gulp.src(['./app/client/components/**/*.js', './server/**/*.js'])
+    return gulp.src(['./app/client/components/**/*.js', './app/server/**/*.js'])
         .pipe(eslint())
         .pipe(eslint.format())
         .pipe(eslint.failOnError());
