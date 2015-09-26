@@ -6,8 +6,9 @@ var session = require('express-session');
 
 require('./routes/configure')(app);
 
-// app.use('/api', require('./routes'));
-// app.use(session({secret: 'session secret key'}));
+// app.use('/', function(req, res){
+//   res.sendFile(app.get('indexHTMLPath'));
+// });
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

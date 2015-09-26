@@ -4,12 +4,11 @@
 		.module('sm.schedule')
 		.controller('ScheduleController', ScheduleController);
 
-		ScheduleController.$inject = ['$scope','sessions'];
+		ScheduleController.$inject = ['$scope', '$firebaseArray', 'FIREBASE_URI'];
 
-		function ScheduleController ($scope, sessions) {
-			// var vm = this;
-			// vm.sessions = sessions;
-			$scope.sessions = sessions;
+		function ScheduleController ($scope, $firebaseArray, FIREBASE_URI) {
+			var eventRef = new Firebase(FIREBASE_URI + 'Session');
+			$scope.sessions = $firebaseArray(eventRef);
 		}
 
 })();
