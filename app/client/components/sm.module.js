@@ -20,6 +20,7 @@
          * Feature areas
          */
          
+        'sm.admin',
         'sm.cc',
         'sm.chat',
         'sm.session',

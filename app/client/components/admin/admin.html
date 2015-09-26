@@ -1,0 +1,20 @@
+<div>
+	Add a Session
+	<form ng-submit='submitSession(session)'>
+		<input type='text' ng-model='session.name' placeholder='Name'/><br>
+		<input type='text' ng-model='session.presenter' placeholder='Presenter'/><br>
+		<input type='text' ng-model='session.desc' placeholder='Description'/><br>
+		<button type='submit'>Add</button>
+	</form>
+</div>
+
+<hr>
+
+<div>
+	Sessions
+	<ul>
+		<ol ng-repeat='session in sessions'>
+			{{session}}
+		</ol>
+	</ul>
+</div>
