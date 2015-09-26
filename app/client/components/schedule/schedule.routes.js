@@ -13,7 +13,7 @@
 				{
 					state: 'schedule',
 					config: {
-						url: '/',
+						url: '/schedule',
 						controller: 'ScheduleController',
 						templateUrl: 'client/components/schedule/schedule.html'
 					}

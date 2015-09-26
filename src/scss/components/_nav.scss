@@ -1,0 +1,16 @@
+.Nav {
+	&-title {
+		color: $Default;
+		font-family: $Lato;
+		text-transform: uppercase;
+		text-align: center;
+		font-size: $Headline;
+		/*line-height: 24px;*/
+		padding: .5em 0;
+		
+		.glyphicon {
+			font-size:20px;
+			position:relative;
+		}
+	}
+}
