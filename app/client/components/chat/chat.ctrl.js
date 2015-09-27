@@ -11,8 +11,9 @@
     function chatCtrl($scope, $firebaseObject,$firebaseArray, FIREBASE_URI) {
 
         // Create a new firebase reference
-        var chatRef = new Firebase (FIREBASE_URI + 'Session' + '/' + $scope.sessionID + '/' + "Messages");
-        var userRef = new Firebase (FIREBASE_URI + 'Session' + '/' + $scope.sessionID + '/' + "Users");
+        var chatRef = new Firebase (FIREBASE_URI + 'Session' + '/' + $scope.sessionID + '/' + 'Messages');
+        var userRef = new Firebase (FIREBASE_URI + 'Session' + '/' + $scope.sessionID + '/' + 'Users');
+        //var voteRef = new Firebase (FIREBASE_URI + 'Session' + '/' + $scope.sessionID + '/' + 'Votes' )
 
         // var sessionRef = new Firebase(FIREBASE_URI + 'Session' + '/' + sessionID);
         
@@ -27,20 +28,18 @@
                 } else {
                     userRef.push({id:authData.uid, name:username, token:authData.token});
                     console.log("Logged in as:", authData);
+                    $scope.error= false;
                        $scope.$apply(function() {
                            $scope.user = authData;
                            $scope.username = username;
                        })
                 }
             }, {
-                remember: "sessionOnly"
+                remember: "session"
             });
         }
 
-
-
-
-        $scope.messages =$firebaseArray(chatRef);
+        $scope.messages = $firebaseArray(chatRef);
 
         //add messages to scope
         $scope.addMessage = function(){
@@ -48,11 +47,13 @@
                 text:$scope.newMessageText,
                 id: $scope.user.uid,
                 name: $scope.username,
+                votes: {},
                 time:Firebase.ServerValue.TIMESTAMP
             });
 
         };
 
+        //format Time from UNIX to human readable
         $scope.formatTime = function(timestamp) {
             var date = (timestamp) ? new Date(timestamp) : new Date(),
                 hours = date.getHours() || 12,
@@ -64,35 +65,56 @@
             return '' + hours + ':' + minutes + ampm;
         };
 
-
+        //listen for changes to model and pull user name
         chatRef.on("child_added", function(snapshot, prevChildKey) {
-            var newPost = snapshot.val();
-            $scope.name = newPost.name;
+            var newMessage = snapshot.val();
+            $scope.name = newMessage.name;
 
         });
 
+        //Upvote function
+        $scope.error= false;
+        $scope.voted = false;
 
-//         /*jshint validthis: true */
-//         var vm = this;
-//         vm.avengers = [];
-//         vm.title = 'Avengers';
+        $scope.upVote = function(index, message){
+            if(!$scope.user){
+                $scope.error =true;
+            }else {
 
-//         activate();
+                console.log($scope.user.uid, "UID");
 
-//         function activate() {
-// //            Using a resolver on all routes or dataservice.ready in every controller
-// //            var promises = [getAvengers()];
-// //            return dataservice.ready(promises).then(function(){
-//             return getAvengers().then(function() {
-//                 logger.info('Activated Avengers View');
-//             });
-//         }
+                    if (!message.votes) {
+                        message.votes = {};
+                    }
+                console.log(message.votes[$scope.user.auth.uid]);
+                    message.votes[$scope.user.auth.uid] = !($scope.user.auth.uid in message.votes) ? 0 : message.votes[$scope.user.auth.uid] + 1;
 
-//         function getAvengers() {
-//             return dataservice.getAvengers().then(function(data) {
-//                 vm.avengers = data;
-//                 return vm.avengers;
-//             });
-//         }
+                    message.votecount = Object.keys(message.votes).length;
+                    $scope.messages.$save(index);
+
+                console.log('after', message);
+
+                    //$scope.messages.votes = message.votecount;
+                    //console.log($scope.messages);
+
+
+
+
+
+
+                //$scope.error= false;
+                //console.log(index);
+                //message.votes++;
+                //$scope.messages.$save(index);
+                ////message.votes++;
+                //
+                //console.log($scope.user);
+            }
+
+        }
+
+
+
+
     }
 })();

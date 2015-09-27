@@ -8,10 +8,17 @@
     </form>
 </div>
 
+<div ng-show="error">Join chat to vote ¯\(°_o)/¯</div>
+
 <li ng-repeat="message in messages">
-    {{message.text}}
+
+    <div ng-show="message.votes[user.auth.uid] > 0"> Sorry you can only vote once (>_<)</div>
+
+    <div ng-click="upVote($index, message)">{{message.text}}</div>
+
     {{message.name}}
     {{formatTime(message.time)}}
+    {{message.votecount}}
 
     <button ng-click="messages.$remove(message)">Delete</button>
 
