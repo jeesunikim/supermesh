@@ -5,8 +5,8 @@
 supermesh
 ├── /app
 │   ├── /client (angular components / index.html)
-│   │       ├── /shared
 │   │       ├── /components
+│   │       │           ├── common (shared elements)
 │   │       └── index.html
 │   ├── /server
 │   │       ├── /db (mongo database set up & models)
