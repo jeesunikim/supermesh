@@ -11,7 +11,6 @@ function chatModule(){
 
 
     return {
-
         restrict:'E',
         templateUrl:'/client/components/chat/chat.html',
         controller: 'chatCtrl'

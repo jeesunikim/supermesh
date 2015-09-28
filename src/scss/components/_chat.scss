@@ -1,0 +1,76 @@
+.Chat {
+	&-headline {
+		h2 {
+			font-size: $Headline;
+			color: $NeonLightBlue;
+			text-align: center;
+		}
+	}
+	&-section {
+		background-color: $Default;
+		color: $Black;
+		padding: 12px 0;
+		text-transform: uppercase;
+		text-align: center;
+		font-size: $Subheadline;
+		margin-top: 15px;
+		position: relative;
+	}
+	.warning { 
+		color: red;
+		margin: 1em 0;
+		display: block;
+		text-align: center;
+	}
+	&-room {
+		li {
+			list-style: none;
+			// border-bottom: 1px solid $Default;
+			border-left: 2px solid $MagentaPink;
+			border-top: 1px solid rgba(0,0,0,0.4);
+			padding: 15px 5px 15px 10px;
+			// margin-bottom: 5px;
+			box-shadow: inset 0 -8px 33px -15px rgba(0,0,0,0.5);
+			position: relative;
+		}
+		.deleteBtn {
+			display: inline-block;
+			background-color: $MagentaPink;
+			outline: none;
+			position: absolute;
+			cursor: pointer;
+			float: right;
+			transition: all 0.3s ease;
+			font-size: 12px;
+			right: 5px;
+			top: 50%;
+			transform: translateY(-50%);
+			-webkit-transform: translateY(-50%);
+			-ms-transform: translateY(-50%);
+			-moz-transform: translateY(-50%);
+			-o-transform: translateY(-50%);
+			color: $White;
+			padding: 3px;
+			margin: .5em 0;
+			border: 1px solid $MagentaPink;
+		}
+		.user {
+			font-size: $Subheadline;
+			display: block;
+			color: $NeonGreen;
+			line-height:2em;
+			font-weight: bold;
+			.time {
+				display: inline-block;
+				float: right;
+				font-size: $Small;
+				padding-right: 30px;
+				color: $White;
+			}
+		}
+		.message {
+			color: $NeonYellow;
+			display: block;
+		}
+	}
+}

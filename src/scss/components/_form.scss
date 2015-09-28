@@ -2,8 +2,8 @@ input[type="text"] {
 	background-color: $Transparent;
 	color: #C0BFBE;
 	cursor: text;
-	margin: .5em auto;
-	/*padding: 10px 40px;*/
+	margin: 1.25em auto;
+	padding-left: 10px;
 	width: 194px;
 	height: 30px;
 	border: 1px solid;
@@ -13,37 +13,47 @@ input[type="text"] {
 
 .inner-addon {
 	position: relative;
+	width: 247px;
+	margin: 0 auto;
 }
 
 .inner-addon .glyphicon {
   position: absolute;
   padding: 10px;
   pointer-events: none;
+  color: $Default;
 }
 
 /* align icon */
 .left-addon .glyphicon  { left:  0px;}
-.right-addon .glyphicon { right: 0px;}
+.right-addon .glyphicon { right: 20px;}
 
 /* add padding  */
-// .left-addon input  { padding-left:  30px; }
-// .right-addon input { padding-right: 30px; }
+.left-addon input  { padding-left: 50px; }
+.right-addon input  { padding-right: 0px; }
 
 .customBtn {
 	display: block;
 	margin: .5em 0;
-	width: 198px;
 	height: 40px;
 	margin: 0 auto;
-	background: transparent;
+	background: $Default;
 	border: 1px solid $Default;
-	color: $Default;
+	color: $Black;
 	outline: none;
 	cursor: pointer;
 	transition: all 0.3s ease;
+	width: 207px;
+	&-index {
+		width: 247px;
+	}
 }
 
 .customBtn:hover {
-	background: $Default;
-	color: $Black;
+	background: transparent;
+	color: $Default;
+}
+
+button {
+	text-transform: uppercase;
 }

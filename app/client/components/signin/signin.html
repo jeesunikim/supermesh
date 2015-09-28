@@ -6,10 +6,13 @@
 		<form name="signin" ng-submit="submitForm()" novalidate>
 			<div class="inner-addon left-addon">
 			    <i class="glyphicon glyphicon-user"></i>
-			    <input type="text" name="name" placeholder="name">
+			    <input type="text" name="name" placeholder="Name">
 			</div>
-			<input type="text" name="phone number">
-			<button class="customBtn" type="submit">Create an Event</button>
+			<div class="inner-addon left-addon">
+		    <i class="glyphicon glyphicon-phone-alt"></i>
+				<input type="text" name="phone number" placeholder="Phone Number">
+				<button class="customBtn customBtn-index" type="submit">Create an Event</button>
+			</div>
 		</form>
 	</div>
 </div>
