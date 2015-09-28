@@ -2,7 +2,6 @@
 
 var chalk = require('chalk'),
     app = require('./routes/configure/'),
-    db = require('./db/db');
 
 var server = require('http').createServer();
 
@@ -12,7 +11,7 @@ var createApplication = function() {
 };
 
 var startServer = function () {
-        var port = 7777;
+        var port = 80;
         server.listen(port, function() {
             console.log(chalk.blue('Server started on port', chalk.magenta(port)));
         });
