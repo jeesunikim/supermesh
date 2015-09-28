@@ -42,7 +42,7 @@
 			float: right;
 			transition: all 0.3s ease;
 			font-size: 12px;
-			right: 0;
+			right: 5px;
 			top: 50%;
 			transform: translateY(-50%);
 			-webkit-transform: translateY(-50%);
@@ -56,20 +56,21 @@
 		}
 		.user {
 			font-size: $Subheadline;
-			display: inline-block;
+			display: block;
 			color: $NeonGreen;
 			line-height:2em;
 			font-weight: bold;
+			.time {
+				display: inline-block;
+				float: right;
+				font-size: $Small;
+				padding-right: 30px;
+				color: $White;
+			}
 		}
 		.message {
 			color: $NeonYellow;
 			display: block;
-		}
-		.time {
-			display: inline-block;
-			float: right;
-			position: absolute;
-			color: $White;
 		}
 	}
 }
