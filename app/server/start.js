@@ -12,7 +12,7 @@ var createApplication = function() {
 };
 
 var startServer = function () {
-        var port = 7777;
+        var port = 80;
         server.listen(port, function() {
             console.log(chalk.blue('Server started on port', chalk.magenta(port)));
         });
