@@ -1,5 +1,4 @@
-var router = require('express').Router(),
-	Session = mongoose.model('Session');
+var router = require('express').Router();
 
 // router.post('/session', function (req, res, next) {
 // 	Session.create(req.body);
