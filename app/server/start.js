@@ -8,14 +8,13 @@ var server = require('http').createServer();
 
 var createApplication = function() {
     server.on('request', app); // Attach the Express Application
-    // require('./io')(server); //Attach socket.io
 };
 
 var startServer = function () {
-        var port = 80;
-        server.listen(port, function() {
-            console.log(chalk.blue('Server started on port', chalk.magenta(port)));
-        });
+    var port = 80;
+    server.listen(port, function() {
+        console.log(chalk.blue('Server started on port', chalk.magenta(port)));
+    });
 };
 
 db.then(createApplication).then(startServer).catch(function(err) {
