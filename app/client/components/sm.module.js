@@ -15,6 +15,7 @@
          
         'sm.core',
         'sm.router',
+        'ngFileUpload',
 
         /*
          * Feature areas
@@ -25,7 +26,8 @@
         'sm.chat',
         'sm.session',
         'sm.sessions',
-        'sm.signin'
+        'sm.signin',
+        'sm.signup'
     ]);
 
 })();

@@ -20,6 +20,7 @@
                     templateUrl: 'client/components/core/404.html',
                     title: '404'
                 }
+
             }
         ];
     }

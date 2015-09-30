@@ -5,29 +5,47 @@
         .module('sm.signin')
         .controller('signInCtrl', signInCtrl);
 
-    /* @ngInject */
-    function signInCtrl() {
-//         /*jshint validthis: true */
-//         var vm = this;
-//         vm.avengers = [];
-//         vm.title = 'Avengers';
+    signInCtrl.$inject = ['$scope','$state', '$rootScope', '$firebaseAuth', 'FIREBASE_URI'];
 
-//         activate();
+    function signInCtrl($scope, $state,$rootScope, $firebaseAuth, FIREBASE_URI) {
 
-//         function activate() {
-// //            Using a resolver on all routes or dataservice.ready in every controller
-// //            var promises = [getAvengers()];
-// //            return dataservice.ready(promises).then(function(){
-//             return getAvengers().then(function() {
-//                 logger.info('Activated Avengers View');
-//             });
-//         }
+        var ref = new Firebase(FIREBASE_URI +'Admin');
+        var adminObj = $firebaseAuth(ref);
 
-//         function getAvengers() {
-//             return dataservice.getAvengers().then(function(data) {
-//                 vm.avengers = data;
-//                 return vm.avengers;
-//             });
-//         }
+        $scope.authEmailUser = function (email, password) {
+
+            adminObj.$authWithPassword({
+                password: password,
+                email: email
+            }).then(function (authData) {
+                console.log("Logged in as:", authData.uid);
+                $rootScope.authData = authData;
+                $state.go('admin');
+
+
+
+            }).catch(function (error) {
+                console.error("Authentication failed:", error);
+                $scope.error =error;
+                $scope.email ="";
+                $scope.password ="";
+                $state.go('signin');
+
+            });
+        }
+
+
+
+
+
+        // now, redirect only not authenticated
+
+        //var userInfo = authenticationSvc.getUserInfo();
+        //
+        //if(userInfo.authenticated === false) {
+        //    e.preventDefault(); // stop current execution
+        //    $state.go('login'); // go to login
+        //}
+
     }
 })();

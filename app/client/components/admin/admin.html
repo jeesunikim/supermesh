@@ -1,22 +1,44 @@
 <div class="Admin">
-	<div class="Admin-section Admin-top">
-		Sessions
-	</div>
-	<ul class="Admin-session">
-		<li ng-repeat='session in sessions'>
-			<span>{{session.name}}!!</span>
-			<span class="presenter">{{session.presenter}} ++</span>
-			<span class="right-addon glyphicon glyphicon-chevron-right right" aria-hidden="true"></span>
-		</li>
-	</ul>
+
 	<div class="Admin-section">
+        Hello {{authData.password.email}},
+        </br>
 		Create a Session
+
 	</div>
-		<form ng-submit='submitSession(session)'>
+
+	<form ng-submit='submitSession(session)'>
 			<input type='text' ng-model='session.name' placeholder='Name'/>
 			<input type='text' ng-model='session.presenter' placeholder='Presenter'/>
 			<input type='text' ng-model='session.desc' placeholder='Description'/>
+			<input type='time' ng-model='session.time' placeholder='08:30PM' />
+
+			<div class="imgDesc">Choose an image</div>
+
+
+
+			<button class="customBtn uploadImg" ngf-select ng-model="file" name="file" ngf-pattern="'image/*'"
+					accept="image/*" ngf-max-size="20MB" ngf-min-height="100"
+					ngf-resize="{width: 200, height: 200}">Upload
+			</button>
+            <img ng-show="loading" class="uploadFile fade-in" src="/loader/ajax_loader_vector.gif">
+            <img class="filePreview" src="{{session.imgUrl}}"/>
+			<div ng-if ="upload.data" ng-model='session.imgUrl' class="fileDesc">{{upload.data}}</div>
 			<button type='submit' class="customBtn">Add a session</button>
+
 		</form>
+	{{session}}
 	</div>
+
+<div class="Admin-section Admin-top">
+	Sessions
+</div>
+<ul class="Admin-session">
+	<li ng-repeat='session in sessions'>
+        <span><img src="{{session.imgUrl}}"></span>
+		<span>{{session.name}}!!</span>
+        <span class="presenter">{{session.presenter}} ++</span>
+		<span class="right-addon glyphicon glyphicon-chevron-right right" aria-hidden="true"></span>
+	</li>
+</ul>
 </div>

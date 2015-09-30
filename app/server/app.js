@@ -19,6 +19,8 @@ app.use(function(req, res, next) {
     }
 });
 
+
+
 // Error catching endware.
 app.use(function(err, req, res, next) {
     console.error(err, typeof next);
