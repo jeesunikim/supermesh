@@ -18,6 +18,8 @@
             function RouterHelper($state) {
                 var hasOtherwise = false;
 
+
+
                 var service = {
                     configureStates: configureStates,
                     getStates: getStates
