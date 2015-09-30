@@ -1,4 +1,4 @@
-<div class="Admin">
+<section class="Admin">
 	<div class="Admin-section Admin-top">
 		Sessions
 	</div>
@@ -12,11 +12,10 @@
 	<div class="Admin-section">
 		Create a Session
 	</div>
-		<form ng-submit='submitSession(session)'>
-			<input type='text' ng-model='session.name' placeholder='Name'/>
-			<input type='text' ng-model='session.presenter' placeholder='Presenter'/>
-			<input type='text' ng-model='session.desc' placeholder='Description'/>
-			<button type='submit' class="customBtn">Add a session</button>
-		</form>
-	</div>
-</div>
+	<form ng-submit='submitSession(session)'>
+		<input type='text' ng-model='session.name' placeholder='Name'/>
+		<input type='text' ng-model='session.presenter' placeholder='Presenter'/>
+		<input type='text' ng-model='session.desc' placeholder='Description'/>
+		<button type='submit' class="customBtn">Add a session</button>
+	</form>
+</section>
