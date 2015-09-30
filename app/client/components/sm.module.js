@@ -25,7 +25,6 @@
         'sm.cc',
         'sm.chat',
         'sm.session',
-        'sm.sessions',
         'sm.signin',
         'sm.signup',
         'sm.event',
