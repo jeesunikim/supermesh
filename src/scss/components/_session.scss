@@ -6,10 +6,10 @@
 			display: inline-block;
 		}
 		.presenter {
-			display: inline-block;
+			font-size: $Small;
+			display: block;
 			color: $Blue;
 			line-height:2em;
 		}
-
 	}
 }
