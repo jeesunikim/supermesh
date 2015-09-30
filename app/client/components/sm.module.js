@@ -27,7 +27,9 @@
         'sm.session',
         'sm.sessions',
         'sm.signin',
-        'sm.signup'
+        'sm.signup',
+        'sm.event',
+        'sm.signin'
     ]);
 
 })();
