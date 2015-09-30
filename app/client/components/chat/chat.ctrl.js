@@ -83,7 +83,6 @@
             message.votes[$scope.user.auth.uid] = !($scope.user.auth.uid in message.votes) ? 0 : message.votes[$scope.user.auth.uid] + 1;
             message.votecount = Object.keys(message.votes).length;
             $scope.messages.$save(index);
-            // console.log('after', message);
         }
     }
     }

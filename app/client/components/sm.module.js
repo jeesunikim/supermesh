@@ -24,7 +24,7 @@
         'sm.cc',
         'sm.chat',
         'sm.session',
-        'sm.sessions',
+        'sm.event',
         'sm.signin'
     ]);
 

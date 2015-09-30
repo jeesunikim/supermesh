@@ -25,13 +25,21 @@
 	&-room {
 		li {
 			list-style: none;
-			// border-bottom: 1px solid $Default;
 			border-left: 2px solid $MagentaPink;
 			border-top: 1px solid rgba(0,0,0,0.4);
 			padding: 15px 5px 15px 10px;
-			// margin-bottom: 5px;
 			box-shadow: inset 0 -8px 33px -15px rgba(0,0,0,0.5);
 			position: relative;
+		}
+		.upvote {
+			float: left;
+			position: relative;
+			display: inline-block;
+			color: $NeonRed;
+				.vote {
+					display: block;
+					text-align: center;
+				}
 		}
 		.deleteBtn {
 			display: inline-block;
@@ -58,6 +66,7 @@
 			font-size: $Subheadline;
 			display: block;
 			color: $NeonGreen;
+			padding-left: 40px;
 			line-height:2em;
 			font-weight: bold;
 			.time {
@@ -69,8 +78,10 @@
 			}
 		}
 		.message {
+			padding-left: 40px;
 			color: $NeonYellow;
 			display: block;
+			font-size: $Small;
 		}
 	}
 }

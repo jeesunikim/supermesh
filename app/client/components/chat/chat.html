@@ -19,7 +19,7 @@
         <li ng-repeat="message in messages">
             <span class="warning" ng-show="message.votes[user.auth.uid] > 0"> Sorry you can only vote once (&gt;_&lt;)</span>
             <div class="upvote">
-                <span class="glyphicon glyphicon-triangle-top"  ng-click="upVote($index, message)"></span>
+                <span class="glyphicon glyphicon-triangle-top" ng-click="upVote($index, message)"></span>
                 <span class="vote">{{message.votecount}}</span>
                 <span class="vote" ng-show="!message.votecount">0</span>
             </div>
@@ -33,7 +33,7 @@
         </li>
     </ul>
 
-    <form ng-show="user" ng-show="authAnonUser"  ng-submit ="addMessage()">
+    <form ng-show="user" ng-show="authAnonUser" ng-submit ="addMessage()">
         <div class="inner-addon right-addon">
             <i class="glyphicon glyphicon-send"></i>
             <input type="text" ng-model="newMessageText" />
