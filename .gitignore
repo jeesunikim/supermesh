@@ -3,5 +3,6 @@ node_modules
 npm-debug.log
 .idea/
 .idea/*
-dist
+
 dist/js/main.js
+dist/css/style.min.css

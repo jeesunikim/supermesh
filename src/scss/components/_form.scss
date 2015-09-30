@@ -1,4 +1,4 @@
-input[type="text"] {
+input[type="text"],[type="time"], [type="password"] {
 	background-color: $Transparent;
 	color: #C0BFBE;
 	cursor: text;
@@ -34,9 +34,9 @@ input[type="text"] {
 
 .customBtn {
 	display: block;
-	margin: .5em 0;
 	height: 40px;
 	margin: 0 auto;
+    margin-top: 10px;
 	background: $Default;
 	border: 1px solid $Default;
 	color: $Black;
@@ -49,7 +49,47 @@ input[type="text"] {
 	}
 }
 
+.imgDesc{
+  font-size:$Small;
+  color:$White;
+  margin: 0.5em 0;
+  text-align: center;
+
+}
+
+.uploadImg{
+  margin-bottom:10px;
+  background: none;
+  width:103px;
+  color:white;
+  border:1px solid $Default;
+}
+
+.fileDesc{
+  font-size:$Small;
+  color:$White;
+  margin: 0.5em 0;
+  text-align: center;
+
+}
+
+.filePreview{
+  display: block;
+  margin: 0 auto;
+  border: 1px solid $Black;
+}
+.errorMsg{
+  color:$NeonRed;
+  font-size:1.2em;
+}
+.uploadFile{
+  display: block;
+  margin: 0 auto;
+  width:200px;
+  height: 200px;
+}
 .customBtn:hover {
+
 	background: transparent;
 	color: $Default;
 }
