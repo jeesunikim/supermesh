@@ -4,7 +4,7 @@ var router = require('express').Router();
 // router.use('/', require('./'));
 // router.use('/session', require('./sessions'));
 // router.use('/', require('./'));
-// router.use('/', require('./'));
+ router.use('/upload', require('./sessions'));
 
 router.use(function (req, res) {
 	res.status(404).end();
