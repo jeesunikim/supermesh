@@ -15,6 +15,8 @@
         var userRef = new Firebase (FIREBASE_URI + 'Session' + '/' + $scope.sessionID + '/' + 'Users');
 
         $scope.user = 0;
+        $scope.voteArr = [];
+
         //create anon user with uid and limit session to browser open only.
         $scope.authAnonUser= function(username){
             chatRef.authAnonymously(function(error, authData) {
@@ -67,6 +69,8 @@
         $scope.name = newMessage.name;
     });
 
+    // Custom Filter
+
     //Upvote function
     $scope.error= false;
     $scope.voted = false;
@@ -82,6 +86,7 @@
             // console.log(message.votes[$scope.user.auth.uid]);
             message.votes[$scope.user.auth.uid] = !($scope.user.auth.uid in message.votes) ? 0 : message.votes[$scope.user.auth.uid] + 1;
             message.votecount = Object.keys(message.votes).length;
+            $scope.voteArr.push(message.votecount);
             $scope.messages.$save(index);
         }
     }

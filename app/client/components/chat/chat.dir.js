@@ -14,11 +14,6 @@ function chatModule(){
         restrict:'E',
         templateUrl:'/client/components/chat/chat.html',
         controller: 'chatCtrl'
-        //link: function(scope, element,  attr){
-        //    console.debug(scope);
-        //
-        //}
-
     };
 
 
