@@ -9,10 +9,30 @@
 		// margin: 1em 0;
 		position: relative;
 	}
-	a {
-		color: $White;
-	}
-	ul {
-
+	&-session {
+		li {
+			cursor: pointer;
+			// border-bottom: 1px solid $Default;
+			border-left: 2px solid $MagentaPink;
+			border-top: 1px solid rgba(0,0,0,0.4);
+			padding: 15px 5px 15px 10px;
+			// margin-bottom: 5px;
+			box-shadow: inset 0 -8px 33px -15px rgba(0,0,0,0.5);
+			position: relative;
+			h2 {
+				font-size: $Subheadline;
+				color: $Default;
+				margin: 0;
+			}
+			span.presenter {
+				font-size: $Small;
+				display: block;
+				color: $Blue;
+				margin-top: 1em;
+			}
+			span {
+				color: $Default;
+			}
+		}
 	}
 }

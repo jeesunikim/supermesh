@@ -4,12 +4,13 @@
 		h2 {
 			color: $Default;
 			display: inline-block;
+			margin: 0.67em 0 .2em 0;
 		}
 		.presenter {
-			display: inline-block;
+			font-size: $Small;
+			display: block;
 			color: $Blue;
 			line-height:2em;
 		}
-
 	}
 }
