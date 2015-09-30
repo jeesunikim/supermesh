@@ -11,6 +11,7 @@ var gulp = require('gulp'),
 	eslint = require('gulp-eslint'),
 	rename = require('gulp-rename'),
     angularFilesort = require('gulp-angular-filesort');
+// TODO: browserify
 
 // Live reload CSS
 gulp.task('reload', function () {

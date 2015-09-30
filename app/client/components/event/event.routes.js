@@ -1,7 +1,7 @@
 (function(){
 	'use strict';
 	angular
-		.module('sm.sessions')
+		.module('sm.event')
 		.run(appRun)
 
 		function appRun(routerHelper){
@@ -11,11 +11,11 @@
 		function getStates(){
 			return [
 				{
-					state: 'sessions',
+					state: 'event',
 					config: {
-						url: '/sessions',
-						controller: 'SessionsController',
-						templateUrl: 'client/components/sessions/sessions.html'
+						url: '/event',
+						controller: 'eventController',
+						templateUrl: 'client/components/event/event.html'
 					}
 				}
 			];
