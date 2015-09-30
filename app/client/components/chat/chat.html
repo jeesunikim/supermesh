@@ -18,12 +18,15 @@
     <ul class="Chat-room">
         <li ng-repeat="message in messages">
             <span class="warning" ng-show="message.votes[user.auth.uid] > 0"> Sorry you can only vote once (&gt;_&lt;)</span>
-
+            <div class="upvote">
+                <span class="glyphicon glyphicon-triangle-top"  ng-click="upVote($index, message)"></span>
+                <span class="vote">{{message.votecount}}</span>
+                <span class="vote" ng-show="!message.votecount">0</span>
+            </div>
             <span class="user">{{message.name}}
                 <span class="time">{{formatTime(message.time)}}</span>
             </span>
-            <span class="message" ng-click="upVote($index, message)">{{message.text}}</span>
-            <span>{{message.votecount}}</span>
+            <span class="message">{{message.text}}</span>
 
             <button class="deleteBtn" ng-click="messages.$remove(message)"><span class="glyphicon glyphicon-remove"></span></button>
 
