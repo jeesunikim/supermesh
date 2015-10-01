@@ -1,33 +1,26 @@
 <div class="Admin">
 
 	<div class="Admin-section">
-        Hello <b>{{authData.password.email}}</b>,
-        </br>
-		Create a Session
+		Hello <b>{{authData.password.email}}</b>,
+	</br>
+	Create a Session
 
 	</div>
 
 	<form ng-submit='submitSession(session)'>
-			<input type='text' ng-model='session.name' placeholder='Name'/>
-			<input type='text' ng-model='session.presenter' placeholder='Presenter'/>
-			<input type='text' ng-model='session.desc' placeholder='Description'/>
-			<input type='time' ng-model='session.time' placeholder='08:30PM' />
+		<input type='text' ng-model='session.name' placeholder='Name'/>
+		<input type='text' ng-model='session.presenter' placeholder='Presenter'/>
+		<textarea ng-model='session.desc' placeholder='Description'/>hello</textarea>
+		<input type='time' ng-model='session.time' placeholder='08:30PM' />
 
-			<div class="imgDesc">Choose an image</div>
+		<span ngf-select ng-model="file" name="file" ngf-pattern="'image/*'" accept="image/*" ngf-max-size="20MB" ngf-min-height="100" ngf-resize="{width: 200, height: 200}">Choose an image <span class="glyphicon glyphicon-upload"></span></span>
 
+		<img ng-show="loading" class="uploadFile fade-in" src="/loader/ajax_loader_vector.gif">
+		<img class="filePreview" src="{{session.imgUrl}}"/>
+		<div ng-if ="upload.data" ng-model='session.imgUrl' class="fileDesc">{{upload.data}}</div>
+		<button type='submit' class="customBtn">Add a session</button>
 
-
-			<button class="customBtn uploadImg" ngf-select ng-model="file" name="file" ngf-pattern="'image/*'"
-					accept="image/*" ngf-max-size="20MB" ngf-min-height="100"
-					ngf-resize="{width: 200, height: 200}">Upload
-			</button>
-            <img ng-show="loading" class="uploadFile fade-in" src="/loader/ajax_loader_vector.gif">
-            <img class="filePreview" src="{{session.imgUrl}}"/>
-			<div ng-if ="upload.data" ng-model='session.imgUrl' class="fileDesc">{{upload.data}}</div>
-			<button type='submit' class="customBtn">Add a session</button>
-
-		</form>
+	</form>
 	{{session}}
-	</div>
 
 </div>

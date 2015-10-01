@@ -1,4 +1,4 @@
-input[type="text"],[type="time"], [type="password"] {
+input[type="text"],[type="time"], [type="password"], textarea {
 	background-color: $Transparent;
 	color: #C0BFBE;
 	cursor: text;
@@ -9,6 +9,11 @@ input[type="text"],[type="time"], [type="password"] {
 	border: 1px solid;
 	outline: none;
 	display: block;
+}
+
+textarea {
+	height: 180px;
+	resize: none;
 }
 
 .inner-addon {
@@ -49,22 +54,6 @@ input[type="text"],[type="time"], [type="password"] {
 	}
 }
 
-.imgDesc{
-  font-size:$Small;
-  color:$White;
-  margin: 0.5em 0;
-  text-align: center;
-
-}
-
-.uploadImg{
-  margin-bottom:10px;
-  background: none;
-  width:103px;
-  color:white;
-  border:1px solid $Default;
-}
-
 .fileDesc{
   font-size:$Small;
   color:$White;
@@ -82,12 +71,12 @@ input[type="text"],[type="time"], [type="password"] {
   color:$NeonRed;
   font-size:1.2em;
 }
-.uploadFile{
-  display: block;
-  margin: 0 auto;
-  width:200px;
-  height: 200px;
-}
+// .uploadFile{
+//   display: block;
+//   margin: 0 auto;
+//   width:200px;
+//   height: 200px;
+// }
 .customBtn:hover {
 
 	background: transparent;
