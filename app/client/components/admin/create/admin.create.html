@@ -12,9 +12,7 @@
 		<input type='text' ng-model='session.presenter' placeholder='Presenter'/>
 		<textarea ng-model='session.desc' placeholder='Description'/>hello</textarea>
 		<input type='time' ng-model='session.time' placeholder='08:30PM' />
-
 		<span ngf-select ng-model="file" name="file" ngf-pattern="'image/*'" accept="image/*" ngf-max-size="20MB" ngf-min-height="100" ngf-resize="{width: 200, height: 200}">Choose an image <span class="glyphicon glyphicon-upload"></span></span>
-
 		<img ng-show="loading" class="uploadFile fade-in" src="/loader/ajax_loader_vector.gif">
 		<img class="filePreview" src="{{session.imgUrl}}"/>
 		<div ng-if ="upload.data" ng-model='session.imgUrl' class="fileDesc">{{upload.data}}</div>
