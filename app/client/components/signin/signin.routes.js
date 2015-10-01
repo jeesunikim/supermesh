@@ -14,7 +14,7 @@
 		{
 			state: 'signin',
 			config: {
-				url: '/',
+				url: '/signin',
 				controller:"signInCtrl",
 				templateUrl: 'client/components/signin/signin.html'
 			}

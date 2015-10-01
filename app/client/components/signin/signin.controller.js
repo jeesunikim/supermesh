@@ -30,7 +30,6 @@
                 $scope.email ="";
                 $scope.password ="";
                 $state.go('signin');
-
             });
         }
 

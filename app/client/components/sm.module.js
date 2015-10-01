@@ -22,6 +22,7 @@
          */
          
         'sm.admin',
+        'sm.adminCreate',
         'sm.cc',
         'sm.chat',
         'sm.session',

@@ -1,6 +1,4 @@
 .Admin {
-
-
 	&-section {
 		background-color: $Default;
 		color: $Black;
@@ -8,8 +6,10 @@
 		text-transform: uppercase;
 		text-align: center;
 		font-size: $Subheadline;
-		// margin: 1em 0;
 		position: relative;
+		.glyphicon-plus {
+			color: $Black;
+		}
 	}
 	&-top {
 		margin-top:0;
@@ -28,7 +28,7 @@
 				margin: 0;
 			}
 		}
-		span {
+		span, a {
 			color: $Default;
 		}
 	}
