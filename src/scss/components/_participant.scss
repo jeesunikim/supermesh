@@ -1,0 +1,46 @@
+#Participant {
+	display: table;
+	width: 100%;
+	padding-top:20%;
+	.Participant {
+		display: table-cell;
+		text-align: center;
+		vertical-align: middle;
+		margin: 0 1em;
+		h1 {
+			font-size: $Headline;
+			font-family: $Hind;
+			color: $Default;
+
+		}
+		.customBtn-reverse {
+			z-index:20000;
+		}
+		#holder { 
+			width:300px; 
+			height:300px; 
+			margin:0 auto; 
+		}
+		&-headline {
+			h2 {
+				font-size: $Subheadline;
+				color: $Default;
+				font-family: $Lato;
+				text-align: center;
+				line-height: 2em;
+			}
+		}
+		&-form {
+			text-align:center;
+			font-family: $Lato;
+		}
+		p {
+			color: $Default;
+			font-size: $Small;
+		}
+		a {
+			color: $White;
+			text-decoration: underline;
+		}
+	}
+}

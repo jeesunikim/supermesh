@@ -22,12 +22,14 @@
          */
          
         'sm.admin',
+        'sm.adminCreate',
         'sm.cc',
         'sm.chat',
         'sm.session',
         'sm.signin',
         'sm.signup',
         'sm.event',
+        'sm.participant',
         'sm.signin'
     ]);
 

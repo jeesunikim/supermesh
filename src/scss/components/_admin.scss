@@ -1,6 +1,4 @@
 .Admin {
-
-
 	&-section {
 		background-color: $Default;
 		color: $Black;
@@ -8,8 +6,33 @@
 		text-transform: uppercase;
 		text-align: center;
 		font-size: $Subheadline;
-		// margin: 1em 0;
 		position: relative;
+		.glyphicon-plus {
+			color: $Black;
+		}
+	}
+	form {
+		span {
+			color: $White;
+			cursor: pointer;
+			font-size:$Small;
+			display: block;
+			text-transform: uppercase;
+	  		text-align: center;
+	  		span.glyphicon {
+	  			display: inline-block;
+	  		}
+		}
+	}
+	.uploadImg{
+	  margin-bottom:10px;
+	  background: none;
+	  width:103px;
+	  color:white;
+	  border:1px solid $Default;
+	}
+	textarea, input[type="text"],[type="time"] {
+		width: 250px;
 	}
 	&-top {
 		margin-top:0;
@@ -28,7 +51,19 @@
 				margin: 0;
 			}
 		}
-		span {
+		img {
+			display: inline-block;
+		}
+		div {
+			display: inline-block;
+			position: absolute;
+			top: 50%;
+			-webkit-transform: translateY(-50%);
+			-ms-transform: translateY(-50%);
+			transform: translateY(-50%);
+			padding-left: 10px;
+		}
+		span, a {
 			color: $Default;
 		}
 	}

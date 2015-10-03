@@ -1,6 +1,6 @@
 <div class="Signup">
 	<div class="Signup-headline">
-		<h2>Sign Up for Super Mesh</h2>
+		<h2>Always Be Connected<br/> Even Without Internet</h2>
 	</div>
 
 
@@ -8,17 +8,17 @@
 	<div class="Signup-form">
 		<form name="signup" ng-submit="signUpUser(email, password)" novalidate>
 			<div class="inner-addon left-addon">
-			    <i class="glyphicon glyphicon-envelope"></i>
-			    <input type="text" name="email" ng-model="email" placeholder="email">
+				<i class="glyphicon glyphicon-envelope"></i>
+				<input type="text" name="email" ng-model="email" placeholder="EMAIL">
 			</div>
 			<div class="inner-addon left-addon">
-		    <i class="glyphicon glyphicon-lock"></i>
-				<input type="password" name="password" ng-model ="password" placeholder="password">
-
+				<i class="glyphicon glyphicon-lock"></i>
+				<input type="password" name="password" ng-model ="password" placeholder="PASSWORD">
 				<div class ="errorMsg" ng-show="error">{{error.code}}</div>
-
 				<button class="customBtn customBtn-index" type="submit">Sign Up</button>
 			</div>
 		</form>
+		<p>Already have an account and want to create an event?</p>
+		<p><a ui-sref="signin">Sign in</a></p>
 	</div>
 </div>
