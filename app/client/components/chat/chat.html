@@ -1,18 +1,26 @@
 <div class="Chat">
     <div class="Chat-headline">
-        <h2>Welcome to Session Chat</h2>
+        <div class="presenter">Feel to ask questions and talk to your fellow chat fellows.<br/>Please remember to be respectful and considerate.</div>
     </div>
 
-    <div class="Chat-section">
+    <div class="Chat-section" ng-show="!user">
         Join Us
     </div>
 
-    <div ng-show="!user" class='chat-toolbar'>
+    <div class='chat-toolbar' ng-show="!user">
         <form ng-submit="authAnonUser(username)">
             <input type='text' ng-model ='username' placeholder='enter a username...'>
             <button class="customBtn" type="submit">Join</button>
         </form>
     </div>
+
+    <form ng-show="user" ng-show="authAnonUser" ng-submit ="addMessage()">
+        <div class="inner-addon right-addon">
+            <i class="glyphicon glyphicon-send"></i>
+            <input type="text" ng-model="newMessageText" />
+            <button class="customBtn" type="submit">Send</button>
+        </div>
+    </form>
 
     <span class="warning" ng-show="error">Join chat to vote ¯\(°_o)/¯</span>
 
@@ -37,12 +45,4 @@
 
         </li>
     </ul>
-
-    <form ng-show="user" ng-show="authAnonUser" ng-submit ="addMessage()">
-        <div class="inner-addon right-addon">
-            <i class="glyphicon glyphicon-send"></i>
-            <input type="text" ng-model="newMessageText" />
-            <button class="customBtn" type="submit">Send</button>
-        </div>
-    </form>
 </div>

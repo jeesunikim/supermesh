@@ -22,8 +22,6 @@
 		$scope.sessions = $firebaseArray(eventRef);
 
 		$scope.submitSession = function(session){
-
-			console.log(session, "SESSION SUBMITTED TO FIREBASE")
 			$scope.sessions.$add(session);
 			$scope.session ={};
 			$scope.upload ="";

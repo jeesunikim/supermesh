@@ -37,16 +37,5 @@
             });
         }
 
-
-
-        // now, redirect only not authenticated
-
-        //var userInfo = authenticationSvc.getUserInfo();
-        //
-        //if(userInfo.authenticated === false) {
-        //    e.preventDefault(); // stop current execution
-        //    $state.go('login'); // go to login
-        //}
-
     }
 })();
