@@ -1,7 +1,7 @@
 (function(){
 	'use strict';
 	angular
-	.module('sm.signup')
+	.module('sm.participant')
 	.run(appRun)
 
 	function appRun(routerHelper){
@@ -12,11 +12,10 @@
 
 		return [
 		{
-			state: 'signup',
+			state: 'participant',
 			config: {
-				url: '/signup',
-				controller:"signUpCtrl",
-				templateUrl: 'client/components/signup/signup.html'
+				url: '/',
+				templateUrl: 'client/components/participant/participant.html'
 			}
 		}
 		]

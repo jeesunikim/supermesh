@@ -29,6 +29,7 @@
         'sm.signin',
         'sm.signup',
         'sm.event',
+        'sm.participant',
         'sm.signin'
     ]);
 

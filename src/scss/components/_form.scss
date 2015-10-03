@@ -54,6 +54,28 @@ textarea {
 	}
 }
 
+.customBtn-reverse {
+	display: block;
+	height: 40px;
+	margin: 0 auto;
+    margin-top: 10px;
+	background: transparent;
+	border: 1px solid $Default;
+	color: $Default;
+	outline: none;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	width: 207px;
+	&-index {
+		width: 247px;
+	}
+}
+
+.customBtn-reverse:hover {
+	background: $Default;
+	color: $Black;
+}
+
 .fileDesc{
   font-size:$Small;
   color:$White;
