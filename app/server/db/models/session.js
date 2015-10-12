@@ -15,24 +15,13 @@ var Session = new mongoose.Schema({
 		default: shortid.generate
 	},
 	name: String,
-	speaker: {
-		type: String,
-		ref: 'Speaker'
-	},
+	speaker: String,
 	starttime: Number,
 	endtime: Number,
-	duration: Number,
-	location: {
-		type: String,
-		ref: 'Location'
-	},
+	location: String,
 	messages: {
 		type: String,
 		ref: 'Messages'
-	},
-	participants: {
-		type: String,
-		ref: 'Participants'
 	}
 });
 

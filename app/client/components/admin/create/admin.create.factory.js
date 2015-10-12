@@ -1,11 +1,10 @@
 (function(){
 
     angular
-        .module('sm.adminCreate')
-        .factory('AdminFactory', AdminFactory);
+    .module('sm.adminCreate')
+    .factory('AdminFactory', AdminFactory);
 
     AdminFactory.$inject = ['Upload','FIREBASE_URI'];
-
 
     function AdminFactory(Upload){
 
