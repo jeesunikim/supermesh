@@ -10,6 +10,11 @@
 			$scope.sessionID = sessionID;
 			var sessionRef = new Firebase(FIREBASE_URI + 'Session' + '/' + sessionID);
 			$scope.session = $firebaseObject(sessionRef);
+			$scope.vote = 0;
+			$scope.sessionVote = function(){
+				$scope.vote ++
+			}
+
 		}
 
 })();

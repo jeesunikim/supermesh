@@ -11,10 +11,11 @@
 
 		//instatiate session object and add to $scope
 		$scope.session = {
-			name:"",
-			presenter:"",
-			desc:"",
-			time:"",
+			name: "",
+			category: "",
+			desc: "",
+			budget: "",
+			address: "",
 			imgUrl:""
 		};
 

@@ -1,7 +1,12 @@
 <div class="Session">
 	<div class="Session-headline">
 		<h2>{{session.name}}</h2>
-		<span class="presenter">by {{session.presenter}}</span>
+		<div class="upvote">
+			<span class="glyphicon glyphicon-triangle-top" ng-click="sessionVote()"></span>
+    	<span class="vote">{{vote}}</span>
+		</div>
+		<span class="category">Category: {{session.category}}</span>
+		<span class="presenter">{{session.desc}}</span>
 	</div>
 	<chat-module></chat-module>
 </div>
