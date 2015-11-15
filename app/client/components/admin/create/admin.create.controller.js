@@ -9,11 +9,11 @@
 	function AdminCreateController($scope, $rootScope, AdminFactory){
 
 		$scope.session = {
-			name:"",
-			presenter:"",
-			desc:"",
-			time:"",
-			imgUrl:""
+			name: "",
+			presenter: "",
+			desc: "",
+			time: "",
+			imgUrl: ""
 		};
 
 		$scope.submitSession = function(session){

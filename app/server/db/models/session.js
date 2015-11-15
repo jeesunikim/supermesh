@@ -1,14 +1,10 @@
 'use strict';
 var mongoose = require('mongoose'),
-	shortid = require('shortid');
-	// location
-	// messages
-	// participants
-	// speakers
+		shortid = require('shortid');
 
 var db = require ('../db');
 
-var Session = new mongoose.Schema({
+var sessionSchema = new mongoose.Schema({
 	_id: {
 		type: String,
 		unique: true,
@@ -16,13 +12,12 @@ var Session = new mongoose.Schema({
 	},
 	name: String,
 	speaker: String,
-	starttime: Number,
-	endtime: Number,
 	location: String,
-	messages: {
+	message: String,
+	user: [{
 		type: String,
-		ref: 'Messages'
-	}
+		ref: 'User'
+	}]
 });
 
-mongoose.model('Session', Session);
+mongoose.model('Session', sessionSchema);
