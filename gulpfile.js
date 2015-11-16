@@ -10,7 +10,7 @@ var gulp = require('gulp'),
 	sourcemaps = require('gulp-sourcemaps'),
 	eslint = require('gulp-eslint'),
 	rename = require('gulp-rename'),
-    angularFilesort = require('gulp-angular-filesort');
+  angularFilesort = require('gulp-angular-filesort');
 // TODO: browserify
 
 // Live reload CSS
@@ -63,7 +63,7 @@ gulp.task('buildCSS', function () {
 gulp.task('watch', function () {
 
     livereload.listen();
-    
+
     gulp.watch('app/client/**/*.js', function () {
         runSeq('buildJS', 'reload');
     });
@@ -76,7 +76,7 @@ gulp.task('watch', function () {
         runSeq('buildCSS', 'reloadCSS');
     });
 
-    gulp.watch('app/server/**/*.js', ['lintJS']); 
+    gulp.watch('app/server/**/*.js', ['lintJS']);
 
 });
 
