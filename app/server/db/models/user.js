@@ -14,8 +14,6 @@ var userSchema = new mongoose.Schema({
     type: Date,
     default: new Date()
   },
-  google_id: String,
-  facebook_id: String,
   email: String,
   phone: String,
   firstName: String,
