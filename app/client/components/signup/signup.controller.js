@@ -5,9 +5,9 @@
         .module('sm.signup')
         .controller('signUpCtrl', signUpCtrl);
 
-    signUpCtrl.$inject = ['$scope','$state', '$rootScope','$firebaseAuth', 'FIREBASE_URI'];
+    signUpCtrl.$inject = ['$scope','$state', '$rootScope'];
 
-    function signUpCtrl($scope, $state,$rootScope, $firebaseAuth, FIREBASE_URI) {
+    function signUpCtrl($scope, $state, $rootScope) {
 
         var ref = new Firebase(FIREBASE_URI +'Admin');
         var authObj = $firebaseAuth(ref);

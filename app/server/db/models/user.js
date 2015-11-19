@@ -19,7 +19,8 @@ var userSchema = new mongoose.Schema({
   firstName: String,
   lastName: String,
   photo: String,
-  security: Number
+  security: Number,
+  vote: Number
 });
 
 mongoose.model('User', userSchema);
