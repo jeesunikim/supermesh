@@ -18,9 +18,11 @@ var userSchema = new mongoose.Schema({
   phone: String,
   firstName: String,
   lastName: String,
+  username: String,
+  password: String,
+  displayName: String,
   photo: String,
-  security: Number,
-  vote: Number
+  security: Number
 });
 
 mongoose.model('User', userSchema);
