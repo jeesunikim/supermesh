@@ -4,9 +4,14 @@ var path = require('path'),
 	app = express(),
 	session = require('express-session');
 
-require('./routes/configure')(app);
+require('./configure')(app);
 app.use('/api', require('./route.js'));
 app.use(session({secret: 'session secret key'}))
+
+app.get('/*', function (req, res) {
+	var index = path.join(__dirname, '..', '..', '..', 'client', 'index.html');
+	res.sendFile(index);
+});
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

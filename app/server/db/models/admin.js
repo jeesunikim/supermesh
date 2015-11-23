@@ -1,8 +1,7 @@
 'use strict';
 
 var mongoose = require('mongoose'),
-    shortid = require('shortid'),
-    Facility = require('./facility.js');
+    shortid = require('shortid');
 
 var db = require('../../db');
 

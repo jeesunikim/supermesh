@@ -4,7 +4,7 @@ var Promise = require('bluebird'),
 	chalk = require('chalk'),
 	mongoose = require('mongoose');
 
-var DATABASE_URI = require(path.join(__dirname, '../config/env')).DATABASE_URI;
+var DATABASE_URI = require(path.join(__dirname, '../env')).DATABASE_URI;
 var db = mongoose.connect(DATABASE_URI).connection;
 
 // Require our models -- these should register the model into mongoose
@@ -21,5 +21,5 @@ console.log(chalk.yellow('Opening connection to MongoDB . . .'));
 startDbPromise.then(function () {
     console.log(chalk.green('MongoDB connection opened!'));
 });
-
-module.exports = startDbPromise;
+console.log(startDbPromise, "startDB");
+module.exports = startDbPromise; 

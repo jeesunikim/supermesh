@@ -10,7 +10,7 @@ var gulp = require('gulp'),
 	sourcemaps = require('gulp-sourcemaps'),
 	eslint = require('gulp-eslint'),
 	rename = require('gulp-rename'),
-  angularFilesort = require('gulp-angular-filesort');
+    angularFilesort = require('gulp-angular-filesort');
 // TODO: browserify
 
 // Live reload CSS

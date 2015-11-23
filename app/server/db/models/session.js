@@ -2,7 +2,7 @@
 var mongoose = require('mongoose'),
 		shortid = require('shortid');
 
-var db = require ('../db');
+var db = require ('../../db');
 
 var sessionSchema = new mongoose.Schema({
 	_id: {
