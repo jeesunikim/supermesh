@@ -1,14 +1,26 @@
-var router = require('express').Router();
+'use strict';
+var path = require('path'),
+	express = require('express'),
+	app = express(),
+	session = require('express-session');
 
-/* All the pages' routers */
-// router.use('/', require('./'));
-// router.use('/session', require('./sessions'));
-// router.use('/', require('./'));
-router.use('/signup', require('./signup'));
-router.use('/login', require('./login'));
+require('./routes/configure')(app);
+app.use('/api', require('./route.js'));
+app.use(session({secret: 'session secret key'}))
 
-router.use(function (req, res) {
-	res.status(404).end();
+// catch 404 and forward to error handler
+app.use(function(req, res, next) {
+    if (path.extname(req.path).length > 0) {
+        res.status(404).end();
+    } else {
+        next(null);
+    }
 });
 
-module.exports = router;
+// Error catching endware.
+app.use(function(err, req, res, next) {
+    console.error(err, typeof next);
+    res.status(err.status || 500).send(err.message || 'Internal server error.');
+});
+
+module.exports = app;
