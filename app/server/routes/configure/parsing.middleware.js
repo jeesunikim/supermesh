@@ -6,7 +6,6 @@ var router = require('express').Router(),
 	logger = require('morgan'),
 	multipart = require('connect-multiparty');
 
-
 	router.use(cookieParser());
 
     // Parse our POST and PUT bodies.
@@ -16,7 +15,5 @@ var router = require('express').Router(),
 
 var multipartMiddleware = multipart();
 router.use(multipartMiddleware);
-
-
 
 module.exports = router;

@@ -1,3 +1,4 @@
+'use strict';
 var router = require('express').Router();
 
 /* All the pages' routers */

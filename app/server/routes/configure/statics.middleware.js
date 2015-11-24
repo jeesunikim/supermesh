@@ -6,8 +6,6 @@ var path = require('path'),
 	rootPath = path.join(__dirname, '..', '..', '..', '..'),
 	publicPath = path.join(rootPath, './dist'),
 	clientPath = path.join(rootPath, './app/client');
-
-// console.log(rootPath, "rootPath");
 	
 router.use(express.static(publicPath));
 

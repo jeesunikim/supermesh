@@ -4,14 +4,16 @@ var chalk = require('chalk');
 var startDb = require('./db');
 var server = require('http').createServer();
 
-var createApplication = function() {
+var createApplication = new Promise(function(resolve, reject) {
     var app = require('./routes');
-    server.on('request', app); // Attach the Express application.
-    require('./io')(server); // Attach socket.io.
-};
+    server.on('request', function() {
+        resolve(app);
+    });
+    require('./io')(server); 
+});
 
 var startServer = function() {
-    var PORT = process.env.NODE_ENV || 7777;
+    var PORT = process.env.PORT || 7777;
     server.listen(PORT, function() {
         console.log(chalk.blue('Server started on port', chalk.magenta(PORT)));
     });
