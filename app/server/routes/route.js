@@ -2,7 +2,7 @@
 var router = require('express').Router();
 
 /* All the pages' routers */
-router.use('/', require('./login'));
+router.use('/', require('./signin'));
 router.use('/signup', require('./signup'));
 router.use('/admin', require('./admin'));
 router.use('/session', require('./session'));
