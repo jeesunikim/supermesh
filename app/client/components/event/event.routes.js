@@ -15,6 +15,7 @@
 					config: {
 						url: '/event',
 						controller: 'eventController',
+						template: '<ui-view>Cecilia</ui-view>',
 						templateUrl: 'client/components/event/event.html'
 					}
 				}

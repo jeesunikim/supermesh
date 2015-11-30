@@ -1,7 +1,10 @@
 (function() {
-    'use strict';
+	'use strict';
 
-    angular
-    	.module('sm.core', []);
+	angular
+		.module('sm.core', [
+			'sm.router',
+			'ui.router'
+		]);
 
 })();

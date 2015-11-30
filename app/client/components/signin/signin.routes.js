@@ -9,14 +9,13 @@
 	}
 
 	function getStates(){
-
 		return [
 		{
 			state: 'signin',
 			config: {
 				url: '/',
-				controller:"signInCtrl",
-				templateUrl: 'client/components/signin/signin.html'
+				templateUrl: '../app/client/components/signin/signin.html',
+				controller:"signInCtrl"
 			}
 		}
 		]

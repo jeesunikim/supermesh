@@ -9,5 +9,10 @@
 
     function signInCtrl($scope, $state,$rootScope) {
     	console.log('meow');
+    	$scope.shoppingList = [
+    		{name: 'Matthew'},
+    		{name: 'Jeesun'},
+    		{name: 'Cecilia'}
+    	];
     }
 })();

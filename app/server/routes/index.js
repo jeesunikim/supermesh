@@ -10,7 +10,7 @@ var path = require('path'),
 // require('./configure')(app);
 app.use('/api', require('./route'));
 app.use(cookieParser());
-app.use(session({secret: 'session secret key'}))
+app.use(session({secret: 'session secret key'}));
 
 /* Static files path */
 var indexHtmlPath = path.join(__dirname, '../../client/index.html');
@@ -23,13 +23,13 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(publicPath));
 
 app.get('/*', function (req, res) {
-  res.sendFile(indexHtmlPath);
+    res.sendFile(indexHtmlPath);
 });
 
 app.use(function(req, res, next) {
-  var err = new Error('Not Found');
-  err.status = 404;
-  next(err);
+    var err = new Error('Not Found');
+    err.status = 404;
+    next(err);
 });
 
 module.exports = app;

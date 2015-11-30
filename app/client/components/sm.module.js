@@ -2,7 +2,6 @@
     'use strict';
 
     angular.module('sm', [
-
         'ui.router',
 
         /*
@@ -25,7 +24,6 @@
         'sm.cc',
         'sm.chat',
         'sm.session',
-        'sm.signin',
         'sm.signup',
         'sm.event',
         'sm.participant',

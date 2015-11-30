@@ -4,9 +4,9 @@
 		.module('sm.session')
 		.controller('SessionController', SessionController);
 
-		SessionController.$inject = ['$scope', 'sessionID', '$firebaseObject', 'FIREBASE_URI'];
+		SessionController.$inject = ['$scope', 'sessionID'];
 
-		function SessionController($scope, sessionID, $firebaseObject, FIREBASE_URI) {
+		function SessionController($scope, sessionID) {
 			$scope.sessionID = sessionID;
 			var sessionRef = new Firebase(FIREBASE_URI + 'Session' + '/' + sessionID);
 			$scope.session = $firebaseObject(sessionRef);

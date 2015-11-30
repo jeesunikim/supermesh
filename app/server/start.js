@@ -6,7 +6,6 @@ var app = require('./routes');
 var server = require('http').createServer(app);
 
 var createApplication = new Promise(function(resolve, reject) {
-    var app = require('./routes');
     server.on('request', function() {
         resolve(app);
     });
