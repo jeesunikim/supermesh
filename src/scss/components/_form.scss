@@ -13,6 +13,15 @@ input[type="text"],[type="time"], [type="password"], textarea {
 	display: block;
 }
 
+button[disabled] {
+	color: $LightGrey;
+}
+button[disabled]:hover {
+	background: $White;
+	border: 1px solid $White;
+	color: $LightGrey;
+}
+
 textarea {
 	height: 180px;
 	resize: none;
@@ -95,16 +104,10 @@ textarea {
   color:$NeonRed;
   font-size:1.2em;
 }
-// .uploadFile{
-//   display: block;
-//   margin: 0 auto;
-//   width:200px;
-//   height: 200px;
-// }
-.customBtn:hover {
 
+.customBtn:hover {
 	background: transparent;
-	color: $Default;
+	color: $White;
 }
 
 button {

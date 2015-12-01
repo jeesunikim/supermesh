@@ -7,12 +7,16 @@
 		margin:0 auto;
 		position: relative;
 		max-width: 200px;
+		text-align:center;
 		img {
 			width:100%;			
 			position: relative;
 		}
 		h2 {
-			text-align: center;
+			color: $White;
+		}
+		.warning {
+			font-size: $Small;
 			color: $White;
 		}
 	}

@@ -3,12 +3,13 @@
 	<div class="logo">
 		<img src="images/pb-transparent.png" alt="PB logo" />
 		<h2>What does your<br/>community need?</h2>
+		<span class="warning">*Please fill in all fields</span>
 	</div>
 
 	<form ng-submit='submitSession(session)'>
 		<input type='text' ng-model='session.name' placeholder='Title of your idea.'/>
 		<input type='text' ng-model='session.category' placeholder='Category. Ex. Library or School'/>
 		<textarea ng-model='session.desc' placeholder='Leave your suggestion idea or improvement'/></textarea>
-		<button type='submit' class="customBtn">Submit</button>
+		<button type='submit' class="customBtn" ng-disabled="(!session.name)||(!session.category)||(!session.desc)">Submit</button>
 	</form>
 </div>
