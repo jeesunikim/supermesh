@@ -1,11 +1,5 @@
 body{
-	background-color: #40403F;
-	background-image: -ms-radial-gradient(center, ellipse cover, #40403F 0%, #2D2D2D 100%);
-	background-image: -moz-radial-gradient(center, ellipse cover, #40403F 0%, #2D2D2D 100%);
-	background-image: -o-radial-gradient(center, ellipse cover, #40403F 0%, #2D2D2D 100%);
-	background-image: -webkit-gradient(radial, center center, 0, center center, 140, color-stop(0, #40403F), color-stop(1, #2D2D2D));
-	background-image: -webkit-radial-gradient(center, ellipse cover, #40403F 0%, #2D2D2D 100%);
-	background-image: radial-gradient(ellipse cover at center, #40403F 0%, #2D2D2D 100%);
+	background-color: $PBdefault;
 	font-family: $Lato;
 }
 
