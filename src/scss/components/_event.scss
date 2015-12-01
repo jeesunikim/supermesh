@@ -1,6 +1,6 @@
 .Event {
 	&-section {
-		background-color: $Default;
+		background-color: $White;
 		color: $Black;
 		padding: 12px 0;
 		text-transform: uppercase;
@@ -11,9 +11,10 @@
 	}
 	&-session {
 		li {
+			background-color: #40403F;
 			cursor: pointer;
 			// border-bottom: 1px solid $Default;
-			border-left: 2px solid $MagentaPink;
+			border-left: 2px solid $PBdefault;
 			border-top: 1px solid rgba(0,0,0,0.4);
 			padding: 15px 5px 15px 10px;
 			// margin-bottom: 5px;

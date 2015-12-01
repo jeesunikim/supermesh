@@ -1,11 +1,11 @@
 <section class="Event">
 	<div class="Event-section">
-		Event
+		<img src="images/pb-logo.png" alt="PB logo" />
 	</div>
 	<ul class="Event-session">
-		<li ng-repeat="session in event" ui-sref="session({id: session.$id})">
+		<li ng-if="session.category" ng-repeat="session in event" ui-sref="session({id: session.$id})">
 			<h2>{{session.name}}</h2>
-			<span class="presenter">{{session.presenter}}</span>
+			<span class="presenter">{{session.category}}</span>
 			<span class="right-addon glyphicon glyphicon-chevron-right right" aria-hidden="true"></span>
 <!-- 			<div session-tile class="session-tile" session="session"></div>
  -->

@@ -1,24 +1,14 @@
 <div class="Admin">
 
-	<div class="Admin-section">
-		Hello <b>{{authData.password.email}}</b>,
-	</br>
-	Create a Session
-
+	<div class="logo">
+		<img src="images/pb-transparent.png" alt="PB logo" />
+		<h2>What does your<br/>community need?</h2>
 	</div>
 
 	<form ng-submit='submitSession(session)'>
-		<input type='text' ng-model='session.name' placeholder='Name'/>
-		<input type='text' ng-model='session.presenter' placeholder='Presenter'/>
-		<textarea ng-model='session.desc' placeholder='Description'/>hello</textarea>
-		<input type='time' ng-model='session.time' placeholder='08:30PM' />
-		<span ngf-select ng-model="file" name="file" ngf-pattern="'image/*'" accept="image/*" ngf-max-size="20MB" ngf-min-height="100" ngf-resize="{width: 200, height: 200}">Choose an image <span class="glyphicon glyphicon-upload"></span></span>
-		<img ng-show="loading" class="uploadFile fade-in" src="/loader/ajax_loader_vector.gif">
-		<img class="filePreview" src="{{session.imgUrl}}"/>
-		<div ng-if ="upload.data" ng-model='session.imgUrl' class="fileDesc">{{upload.data}}</div>
-		<button type='submit' class="customBtn">Add a session</button>
-
+		<input type='text' ng-model='session.name' placeholder='Title of your idea.'/>
+		<input type='text' ng-model='session.category' placeholder='Category. Ex. Library or School'/>
+		<textarea ng-model='session.desc' placeholder='Leave your suggestion idea or improvement'/></textarea>
+		<button type='submit' class="customBtn">Submit</button>
 	</form>
-	{{session}}
-
 </div>

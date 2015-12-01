@@ -1,16 +1,34 @@
 .Session {
 	&-headline {
 		text-align: center;
+		.upvote {
+			position: relative;
+			display: inline-block;
+			color: $NeonRed;
+				.vote {
+					display: block;
+					text-align: center;
+				}
+		}
+		h1 {
+			margin: 0.67em auto 0 auto;
+			color: $White;
+		}
 		h2 {
 			color: $Default;
 			display: inline-block;
 			margin: 0.67em 0 .2em 0;
 		}
-		.presenter {
+		.category {
 			font-size: $Small;
 			display: block;
+			color: $Default;
+		}
+		.presenter {
+			font-size: $Subheadline;
+			display: block;
 			color: $Blue;
-			line-height:2em;
+			margin: 0.67em .5em .67em .5em;
 		}
 	}
 }

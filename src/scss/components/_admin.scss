@@ -1,4 +1,21 @@
 .Admin {
+	background-color:$PBdefault;
+	width: 100%;
+	height: 100%;
+	.logo {
+		padding-top:10%;
+		margin:0 auto;
+		position: relative;
+		max-width: 200px;
+		img {
+			width:100%;			
+			position: relative;
+		}
+		h2 {
+			text-align: center;
+			color: $White;
+		}
+	}
 	&-section {
 		background-color: $Default;
 		color: $Black;
@@ -6,7 +23,6 @@
 		text-transform: uppercase;
 		text-align: center;
 		font-size: $Subheadline;
-		position: relative;
 		.glyphicon-plus {
 			color: $Black;
 		}
@@ -18,18 +34,18 @@
 			font-size:$Small;
 			display: block;
 			text-transform: uppercase;
-	  		text-align: center;
-	  		span.glyphicon {
-	  			display: inline-block;
-	  		}
+			text-align: center;
+			span.glyphicon {
+				display: inline-block;
+			}
 		}
 	}
 	.uploadImg{
-	  margin-bottom:10px;
-	  background: none;
-	  width:103px;
-	  color:white;
-	  border:1px solid $Default;
+		margin-bottom:10px;
+		background: none;
+		width:103px;
+		color:white;
+		border:1px solid $Default;
 	}
 	textarea, input[type="text"],[type="time"] {
 		width: 250px;
@@ -40,6 +56,7 @@
 
 	&-session {
 		li {
+			background-color: #40403F;
 			border-left: 2px solid $MagentaPink;
 			border-top: 1px solid rgba(0,0,0,0.4);
 			padding: 15px 5px 15px 10px;
@@ -73,5 +90,4 @@
 		color: $Blue;
 		margin-top: 1em;
 	}
-	margin-bottom: 2em;
 }

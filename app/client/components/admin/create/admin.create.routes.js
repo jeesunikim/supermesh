@@ -13,7 +13,7 @@
 				{
 					state: 'admincreate',
 					config: {
-						url: '/admin/create',
+						url: '/',
 						controller: 'AdminCreateController',
 						templateUrl: 'client/components/admin/create/admin.create.html'
 					}

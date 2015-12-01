@@ -1,13 +1,15 @@
 input[type="text"],[type="time"], [type="password"], textarea {
-	background-color: $Transparent;
-	color: #C0BFBE;
+	background-color: $White;
+	color: $Black;
 	cursor: text;
 	margin: 1.25em auto;
-	padding-left: 10px;
+	padding: 10px;
 	width: 194px;
 	height: 30px;
-	border: 1px solid;
 	outline: none;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border: none;
 	display: block;
 }
 
@@ -40,11 +42,11 @@ textarea {
 .customBtn {
 	display: block;
 	height: 40px;
-	margin: 0 auto;
-    margin-top: 10px;
-	background: $Default;
-	border: 1px solid $Default;
-	color: $Black;
+	margin: 10px auto 20px auto;
+	background: $White;
+	border: 1px solid $White;
+	color: $PBdefault;
+	font-weight: bold;
 	outline: none;
 	cursor: pointer;
 	transition: all 0.3s ease;
@@ -60,8 +62,8 @@ textarea {
 	margin: 0 auto;
     margin-top: 10px;
 	background: transparent;
-	border: 1px solid $Default;
-	color: $Default;
+	border: 1px solid $PBdefault;
+	color: $White;
 	outline: none;
 	cursor: pointer;
 	transition: all 0.3s ease;
