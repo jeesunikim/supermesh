@@ -26,7 +26,7 @@
 			$scope.sessions.$add(session);
 			$scope.session ={};
 			$scope.upload ="";
-			$state.go('admin');
+			$state.go('ideas');
 		};
 
 		//watch file for change, do stuff and trigger factory Func.

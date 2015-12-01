@@ -11,9 +11,9 @@
 		function getStates(){
 			return [
 				{
-					state: 'admin',
+					state: 'ideas',
 					config: {
-						url: '/admin',
+						url: '/ideas',
 						controller: 'AdminController',
 						templateUrl: 'client/components/admin/admin.html'
 					}

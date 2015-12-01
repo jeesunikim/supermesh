@@ -7,6 +7,8 @@ input[type="text"],[type="time"], [type="password"], textarea {
 	width: 194px;
 	height: 30px;
 	outline: none;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
 	border: none;
 	display: block;
 }
@@ -40,8 +42,7 @@ textarea {
 .customBtn {
 	display: block;
 	height: 40px;
-	margin: 0 auto;
-  margin-top: 10px;
+	margin: 10px auto 20px auto;
 	background: $White;
 	border: 1px solid $White;
 	color: $PBdefault;

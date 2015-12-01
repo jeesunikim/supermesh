@@ -1,4 +1,5 @@
 .Admin {
+	background-color:$PBdefault;
 	width: 100%;
 	height: 100%;
 	.logo {
@@ -16,6 +17,7 @@
 		}
 	}
 	&-section {
+		background-color: $Default;
 		color: $Black;
 		padding: 12px 0;
 		text-transform: uppercase;
@@ -54,6 +56,7 @@
 
 	&-session {
 		li {
+			background-color: #40403F;
 			border-left: 2px solid $MagentaPink;
 			border-top: 1px solid rgba(0,0,0,0.4);
 			padding: 15px 5px 15px 10px;
@@ -87,5 +90,4 @@
 		color: $Blue;
 		margin-top: 1em;
 	}
-	margin-bottom: 2em;
 }
