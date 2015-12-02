@@ -14,7 +14,7 @@
 		{
 			state: 'participant',
 			config: {
-				url: '/',
+				url: '/participant',
 				templateUrl: 'client/components/participant/participant.html'
 			}
 		}
