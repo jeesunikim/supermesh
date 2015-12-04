@@ -2,9 +2,6 @@
 	'use strict';
 
 	angular
-		.module('sm.core', [
-			'sm.router',
-			'ui.router'
-		]);
+		.module('sm.core', []);
 
 })();
