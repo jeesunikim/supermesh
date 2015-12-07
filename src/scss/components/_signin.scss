@@ -2,6 +2,9 @@
 .Signin {
 	margin: 0 1em;
 	position: relative;
+	&-svg {
+		text-align: center;
+	}
 	&-headline {
 		h2 {
 			font-size: $Subheadline;
