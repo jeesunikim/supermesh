@@ -19,8 +19,8 @@
          * Feature areas
          */
          
-        'sm.event',
-        'sm.signin'
+        'sm.ideas',
+        'sm.message'
     ]);
 
 })();

@@ -1,28 +1,16 @@
-<div class="Signin">
-
-	<div class="Signin-svg">
-	
+<div class="Message">
+	<div class="Message-svg">
 		<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="200" x="0px" y="0px" viewBox="0 0 100 125" enable-background="new 0 0 100 100" xml:space="preserve"><path stroke="rgb(248,232,19)" d="M91.1,45c0-0.1,0-0.1,0-0.2c0-0.1-0.1-0.3-0.2-0.4c0,0,0-0.1,0-0.1L77.5,21c-0.5-0.8-1.3-1.3-2.2-1.3h-8.8V9.3  c0-1.4-1.1-2.6-2.6-2.6H36.1c-1.4,0-2.6,1.1-2.6,2.6v10.4h-8.8c-0.9,0-1.8,0.5-2.2,1.3L9.2,44.4c0,0,0,0.1,0,0.1  C9,44.6,9,44.7,8.9,44.9c0,0.1,0,0.1,0,0.2c0,0.2-0.1,0.4-0.1,0.6v45.1c0,1.4,1.1,2.6,2.6,2.6h77.3c1.4,0,2.6-1.1,2.6-2.6V45.6  C91.2,45.4,91.2,45.2,91.1,45z M61.4,11.8v10.4c0,0,0,0,0,0c0,0,0,0,0,0v9.1H38.6v-9.1c0,0,0,0,0,0c0,0,0,0,0,0V11.8H61.4z   M26.2,24.8h7.3v6.6h-1.4c-1.4,0-2.6,1.1-2.6,2.6c0,1.4,1.1,2.6,2.6,2.6h3.9h27.8h3.9c1.4,0,2.6-1.1,2.6-2.6c0-1.4-1.1-2.6-2.6-2.6  h-1.4v-6.6h7.3l10.4,18.3H15.8L26.2,24.8z M86.1,88.2H13.9v-40h72.2V88.2z"/>
 	</div>
-	<div class="Signin-headline">
-		<h2>Always Be Connected<br/> Even Without Internet</h2>
+	<div class="Message-headline">
+		<h2>Message</h2>
 	</div>
-	<span ng-repeat="item in shoppingList">{{item.name}}</span>
-	<div class="Signin-form">
-	<!-- 	<form name="signin" ng-submit="authEmailUser(email, password)" novalidate>
-			<div class="inner-addon left-addon">
-			    <i class="glyphicon glyphicon-envelope"></i>
-			    <input type="text" name="email" ng-model="email" placeholder="email">
-			</div>
-			<div class="inner-addon left-addon">
-		    <i class="glyphicon glyphicon-lock"></i>
-				<input type="password" name="password" ng-model ="password" placeholder="password">
-
-				<div class ="errorMsg" ng-show="error">{{error.code}}</div>
-
-				<button class="customBtn customBtn-index" type="submit">Create an Event</button>
-			</div>
-		</form>
- -->
+	<div class="Message-form">
+	<form ng-submit='submitSession(session)'>
+		<input type='text' ng-model='message.name' placeholder='Title of your idea.'/>
+		<input type='text' ng-model='message.category' placeholder='Category. Ex. Library or School'/>
+		<textarea ng-model='message.desc' placeholder='Leave your suggestion idea or improvement'/></textarea>
+		<button type='submit' class="customBtn" ng-disabled="(!message.name)||(!message.category)||(!message.desc)">Submit</button>
+	</form>
 	</div>
 </div>

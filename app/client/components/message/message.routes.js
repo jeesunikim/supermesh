@@ -1,7 +1,7 @@
 (function(){
 	'use strict';
 	angular
-	.module('sm.signin')
+	.module('sm.message')
 	.run(appRun)
 
 	function appRun(routerHelper){
@@ -11,11 +11,12 @@
 	function getStates(){
 		return [
 		{
-			state: 'signin',
+			state: 'message',
 			config: {
 				url: '/',
-				controller:"signInCtrl",
-				templateUrl: 'app/client/components/signin/signin.html'
+				controller: 'messageCtrl',
+				controllerAs: 'message',
+				templateUrl: 'app/client/components/message/message.html'
 			}
 		}
 		]

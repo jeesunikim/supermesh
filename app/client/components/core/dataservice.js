@@ -8,22 +8,22 @@
     dataservice.$inject = ['$http'];
 
     /* @ngInject */
-    function dataservice() {
+    function dataservice($http) {
         return {
-            getMessages: getMessages
+            getIdeas: getIdeas
         };
 
-        function getMessages() {
-            return $http.get('/api/session')
-                .then(MessagesCompleted)
-                .catch(MessagesFailed);
+        function getIdeas() {
+            return $http.get('/api/message')
+                .then(ideasCompleted)
+                .catch(ideasFailed);
 
-                function MessagesCompleted(res) {
-                    return res.data.results;
+                function ideasCompleted(res) {
+                    return res.data;
                 }
 
-                function MessagesFailed(error) {
-                    logger.error('error');
+                function ideasFailed(error) {
+                    console.log('error');
                 }
         }
     }

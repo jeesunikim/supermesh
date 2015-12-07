@@ -1,7 +1,7 @@
-.Event {
+.Ideas {
 	&-section {
-		background-color: $Default;
-		color: $Black;
+		// background-color: $LightGrey;
+		color: $Default;
 		padding: 12px 0;
 		text-transform: uppercase;
 		text-align: center;
@@ -12,8 +12,9 @@
 	&-session {
 		li {
 			cursor: pointer;
-			// border-bottom: 1px solid $Default;
-			border-left: 2px solid $MagentaPink;
+			color: $DefaultBG;
+			background-color: $Default;
+			border-left: 5px solid $DefaultBG;
 			border-top: 1px solid rgba(0,0,0,0.4);
 			padding: 15px 5px 15px 10px;
 			// margin-bottom: 5px;

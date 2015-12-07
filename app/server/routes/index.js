@@ -7,7 +7,11 @@ var path = require('path'),
     bodyParser = require('body-parser'),
     app = express();
 
-// require('./configure')(app);
+// require('./configure/parsing-middleware')(app);
+
+app.use(logger('dev'));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use('/api', require('./route'));
 app.use(cookieParser());
 app.use(session({secret: 'session secret key'}));
@@ -15,10 +19,6 @@ app.use(session({secret: 'session secret key'}));
 /* Static files path */
 var indexHtmlPath = path.join(__dirname, '../../client/index.html');
 var publicPath = path.join(__dirname, '../../../');
-
-app.use(logger('dev'));
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use(express.static(publicPath));
 

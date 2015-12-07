@@ -1,0 +1,11 @@
+<section class="Ideas">
+	<div class="Ideas-section">
+		{{vm.title}}
+	</div>
+	<ul class="Ideas-session">
+		<li ng-repeat="idea in vm.ideas">
+			{{idea.name}}
+			{{idea.category}}
+		</li>
+	</ul>
+</section>
