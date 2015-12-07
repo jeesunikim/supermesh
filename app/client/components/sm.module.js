@@ -20,6 +20,7 @@
          */
          
         'sm.ideas',
+        'sm.ideaDetails',
         'sm.message'
     ]);
 

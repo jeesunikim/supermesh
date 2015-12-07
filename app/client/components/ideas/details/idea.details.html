@@ -3,13 +3,13 @@
 		{{vm.title}}
 	</div>
 	<ul class="Ideas-session">
-		<li ng-repeat="idea in vm.ideas">
+		<li ng-repeat="eachIdea in vm.idea">
 			<span>
-				{{idea.name}}
-				<span class="category">{{idea.category}}</span>
+				{{eachIdea.message}}
+				<span class="category">{{eachIdea.category}}</span>
 			</span>
 			<span class="upvote glyphicon glyphicon-chevron-up">
-				{{idea.upvote}}
+				{{eachIdea.upvote}}
 			</span>
 		</li>
 	</ul>

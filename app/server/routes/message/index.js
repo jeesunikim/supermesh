@@ -1,11 +1,11 @@
 var bodyParser = require('body-parser'),
-	express = require('express'),
-	path = require('path'),
-	router = express.Router(),
-	logger = require('morgan'),
-	mongoose = require('mongoose'),
-	MessageModel = mongoose.model('Message'),
-	shortId = require('shortid');
+express = require('express'),
+path = require('path'),
+router = express.Router(),
+logger = require('morgan'),
+mongoose = require('mongoose'),
+MessageModel = mongoose.model('Message'),
+shortId = require('shortid');
 
 router.use(logger('dev'));
 router.use(bodyParser.json());
@@ -19,7 +19,17 @@ router.get('/message', function(req, res, next){
 			res.json(msgs);
 		}
 	})
-	// res.send(msgs);
+// res.send(msgs);
+});
+
+router.get('/message/:id', function(req, res, next){
+	MessageModel.findById(req.params.id, function(err, eachMsg) {
+		if (err) {
+			return handleError(err);
+		}else{
+			res.json(eachMsg);
+		}
+	})
 });
 
 router.post('/message', function(req, res, next){
@@ -30,7 +40,7 @@ router.post('/message', function(req, res, next){
 			res.json(newMessage);
 		}
 	});
-	// res.send(msgs);
+// res.send(msgs);
 });
 
 module.exports = router;

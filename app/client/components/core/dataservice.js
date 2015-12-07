@@ -5,12 +5,13 @@
         .module('sm.core')
         .factory('dataservice', dataservice);
 
-    dataservice.$inject = ['$http'];
+    dataservice.$inject = ['$http', '$location'];
 
     /* @ngInject */
-    function dataservice($http) {
+    function dataservice($http, $location) {
         return {
-            getIdeas: getIdeas
+            getIdeas: getIdeas,
+            eachIdea: eachIdea
         };
 
         function getIdeas() {
@@ -23,8 +24,25 @@
                 }
 
                 function ideasFailed(error) {
+                    $location.url('/');
                     console.log('error');
                 }
+        }
+
+        function eachIdea(id) {
+            return $http.get('/api/message/' + id)
+                .then(getEachIdea)
+                .catch(getIdeaFailed);
+
+                function getEachIdea(res) {
+                    return res.data;
+                }
+
+                function getIdeaFailed(error) {
+                    $location.url('/');
+                    console.log(error);
+                }
+
         }
     }
 })();
