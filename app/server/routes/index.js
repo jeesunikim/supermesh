@@ -14,7 +14,7 @@ app.use(session({secret: 'session secret key'}));
 
 /* Static files path */
 var indexHtmlPath = path.join(__dirname, '../../client/index.html');
-var publicPath = path.join(__dirname, '../../../dist');
+var publicPath = path.join(__dirname, '../../../');
 
 app.use(logger('dev'));
 app.use(bodyParser.json());

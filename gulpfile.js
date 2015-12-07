@@ -34,6 +34,7 @@ gulp.task('buildJS', ['lintJS'], function () {
         .pipe(angularFilesort())
         .pipe(plumber())
         .pipe(sourcemaps.init())
+        .pipe(uglify())
         .pipe(concat('main.js'))
         .pipe(sourcemaps.write())
         .pipe(gulp.dest('./dist/js'));

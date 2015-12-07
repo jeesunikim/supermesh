@@ -1,4 +1,4 @@
 (function () {
 	'use strict';
-	angular.module('sm.event', []);
+	angular.module('sm.event', ['sm.core']);
 })();

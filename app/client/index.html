@@ -7,20 +7,29 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href='https://fonts.googleapis.com/css?family=Lato:300|Hind:300|Archivo+Narrow' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" href="/css/style.min.css" type="text/css">
+        <link rel="stylesheet" href="/dist/css/style.min.css" type="text/css">
         <base href="/">
     </head>
     <body ng-app="sm">
 
         <!-- <div nav-bar></div> -->
         <div ui-view></div>
-        
-        <p>Why aren't you working?</p>
-        <p>I wish this woudl work damn it</p>
     
-        <script src="/vendor/vendor.js"></script>
-        <script src="/vendor/ng-file-upload-all.js"></script>
-        <script src="/js/main.js"></script>
-        
+        <script src="/dist/vendor/vendor.js"></script>
+        <script src="/dist/vendor/ng-file-upload-all.js"></script>
+        <script src="/app/client/components/blocks/router/router.module.js"></script>
+        <script src="/app/client/components/core/core.module.js"></script>
+        <script src="/app/client/components/core/core.route.js"></script>
+        <script src="/app/client/components/core/dataservice.js"></script>
+        <script src="/app/client/components/blocks/router/router-helper.provider.js"></script>
+        <script src="/app/client/components/core/router/router.module.js"></script>
+        <script src="/app/client/components/core/router/router.provider.js"></script>
+        <script src="/app/client/components/event/event.module.js"></script>
+        <script src="/app/client/components/event/event.routes.js"></script>
+        <script src="/app/client/components/event/event.controller.js"></script>
+        <script src="/app/client/components/signin/signin.module.js"></script>
+        <script src="/app/client/components/signin/signin.routes.js"></script>
+        <script src="/app/client/components/signin/signin.controller.js"></script>
+        <script src="/app/client/components/sm.module.js"></script>
     </body>
 </html>
