@@ -5,7 +5,10 @@
 	<ul class="Ideas-session">
 		<li ng-repeat="idea in vm.ideas">
 			{{idea.name}}
-			{{idea.category}}
+			<span class="category">{{idea.category}}</span>
+			<span class="upvote glyphicon glyphicon-chevron-up">
+				{{idea.upvote}}
+			</span>
 		</li>
 	</ul>
 </section>

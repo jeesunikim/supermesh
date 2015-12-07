@@ -12,7 +12,8 @@
         vm.messages = {
             name: '',
             category: '',
-            msg: ''
+            message: '',
+            upvote: ''
         }
 
     }
