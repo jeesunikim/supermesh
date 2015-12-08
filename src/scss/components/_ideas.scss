@@ -1,13 +1,18 @@
 .Ideas {
 	&-section {
-		// background-color: $LightGrey;
 		color: $Default;
 		padding: 12px 0;
 		text-transform: uppercase;
 		text-align: center;
 		font-size: $Subheadline;
-		// margin: 1em 0;
 		position: relative;
+		span.upvote {
+			color: $Default;
+			width:15px;
+			margin: 4px 0 0 10px;
+			text-align: center;
+			position: absolute;
+		}
 	}
 	&-session {
 		li {
@@ -42,6 +47,31 @@
 				text-align: center;
 				position: absolute;
 			}
+		}
+	}
+	&-detail {
+		li {
+			color: $DefaultBG;
+			background-color: $Default;
+			border-top: 1px solid rgba(0,0,0,0.4);
+			padding: 15px 5px 15px 10px;
+			box-shadow: inset 0 -8px 33px -15px rgba(0,0,0,0.5);
+			position: relative;
+			span {
+				cursor: pointer;
+			}
+			h2 {
+				font-size: $Subheadline;
+				color: $Default;
+				margin: 0;
+			}
+			span.category {
+				font-size: $Small;
+				display: block;
+				color: $MagentaPink;
+				margin: 0;
+			}
+			
 		}
 	}
 }
