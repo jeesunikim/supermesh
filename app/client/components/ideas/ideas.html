@@ -3,9 +3,10 @@
 		{{vm.title}}
 	</div>
 	<ul class="Ideas-session">
-		<li ng-repeat="idea in vm.ideas">
+		<li ng-repeat="idea in vm.ideas" ui-sref="idea({id: idea._id})">
 			<span>
 				{{idea.name}}
+				{{idea._id}}
 				<span class="category">{{idea.category}}</span>
 			</span>
 			<span class="upvote glyphicon glyphicon-chevron-up">

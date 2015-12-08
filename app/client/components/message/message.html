@@ -4,12 +4,10 @@
 	</div>
 	<div class="Message-headline">
 		<h2>Message</h2>
-		<h3>hi</h3>
 	</div>
 	<div class="Message-form">
 	<form ng-submit='vm.submit(vm.messages)'>
 		<input type='text' ng-model='vm.messages.name' placeholder='What can we improve on?'/>
-			{{vm.messages.name}}
 		<input type='text' ng-model='vm.messages.category' placeholder='Ex. Kitchen'/>
 		<textarea ng-model='vm.messages.message' placeholder='Leave your suggestion'/></textarea>
 		<button type='submit' class="customBtn" ng-disabled="(!vm.messages.name)||(!vm.messages.category)||(!vm.messages.message)">Submit</button>

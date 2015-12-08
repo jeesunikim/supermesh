@@ -3,15 +3,24 @@
 	angular
 		.module('sm.ideaDetails')
 		.controller('ideaDetailsCtrl', ideaDetailsCtrl);
-		ideaDetailsCtrl.$inject = ['$stateParams', 'dataservice'];
+		ideaDetailsCtrl.$inject = ['$stateParams', '$http', 'dataservice'];
 
-		function ideaDetailsCtrl($stateParams, dataservice){
+		function ideaDetailsCtrl($stateParams, $http, dataservice){
 			var vm = this;
 			vm.idea = [];
 			vm.vote = undefined;
 
-			getIdea($stateParams.id);
+			$http({
+				url: '/api/message',
+				method: 'GET',
+				params: {id: $stateParams.id}
+			}).then(function(res) {
+				vm.vote = res.data.vote;
+				console.log(vm.vote, "vote");
+			});
 
+			getIdea($stateParams.id);
+			
 			function getIdea(id) {
 				return dataservice.eachIdea(id).then(function(data) {
 					vm.idea = data;
