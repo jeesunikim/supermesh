@@ -13,7 +13,8 @@
         vm.messages = {
             name: '',
             category: '',
-            message: ''
+            message: '',
+            upvote: 0
         }
 
         vm.submit = function (message) {

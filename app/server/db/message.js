@@ -13,7 +13,12 @@ var messageSchema = new mongoose.Schema({
 	name: String,
 	category: String,
 	message: String,
-	upvote: Number
+	upvote: {type: Number, default: 0}
 });
+
+messageSchema.methods.upvotes = function(cb) {
+	this.upvote += 1;
+	this.save(cb);
+}
 
 mongoose.model('Message', messageSchema);

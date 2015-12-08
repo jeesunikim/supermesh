@@ -67,7 +67,16 @@
 				color: $MagentaPink;
 				margin: 0;
 			}
-			
+		}
+	}
+	span.go-back {
+		float: left;
+		margin: 10px;
+		color: $Default;
+		a {
+			font-family: open-sans-semibold;
+			color: $Default;
+			text-transform: uppercase;
 		}
 	}
 }

@@ -1,12 +1,15 @@
 <section class="Ideas">
 	<div class="Ideas-section">
 		{{vm.idea.name}}
-		<span class="upvote glyphicon glyphicon-chevron-up" ng-model="vm.idea.upvote">
-			{{vm.idea.upvote}}
+		<span class="upvote glyphicon glyphicon-chevron-up" ng-model="vm.vote" ng-click="vm.upvote({id: vm.vote})">
+			{{vm.vote}}
 		</span>
 	</div>
 	<ul class="Ideas-detail">
 		<li>Category: {{vm.idea.category}}</li>
 		<li>Message: {{vm.idea.message}}</li>
 	</ul>
+	<span class="glyphicon glyphicon-hand-left go-back">
+		<a ui-sref="ideas">View all ideas</a>
+	</span>
 </section>
