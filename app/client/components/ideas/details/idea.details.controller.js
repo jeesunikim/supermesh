@@ -8,12 +8,14 @@
 		function ideaDetailsCtrl($stateParams, $http, dataservice){
 			var vm = this;
 			vm.vote = undefined;
+			vm.voteId = undefined;
 
 			$http({
 				url: '/api/message/' + $stateParams.id,
 				method: 'GET'
 			}).then(function(res) {
 				vm.vote = res.data.upvote;
+				vm.voteId = res.data._id;
 			});
 
 			getIdea($stateParams.id);

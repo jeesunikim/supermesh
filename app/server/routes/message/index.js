@@ -21,6 +21,17 @@ router.get('/message', function(req, res, next){
 	})
 // res.send(msgs);
 });
+router.put('/message/:id/upvote', function(req, res, next) {
+   MessageModel.findById(req.params.id, function(err, msg) {
+        if (err) {
+          return handleError(err);
+        } else {
+           msg.upvotes(function(eachMsg){
+               res.json(eachMsg);
+           });
+        }
+    });
+  });
 
 router.get('/message/:id', function(req, res, next){
 	MessageModel.findById(req.params.id, function(err, eachMsg) {
@@ -38,16 +49,6 @@ router.post('/message', function(req, res, next){
 			next(err);
 		}else{
 			res.json(newMessage);
-		}
-	});
-});
-
-router.put('/message/:id/upvote', function(req, res, next) {
-	req.post.upvotes(function(err, post) {
-		if(err) {
-			return next(err);
-		}else{
-			res.json(post);
 		}
 	});
 });

@@ -1,7 +1,7 @@
 <section class="Ideas">
 	<div class="Ideas-section">
 		{{vm.idea.name}}
-		<span class="upvote glyphicon glyphicon-chevron-up" ng-model="vm.vote" ng-click="vm.upvote({id: vm.vote})">
+		<span class="upvote glyphicon glyphicon-chevron-up" ng-model="vm.vote" ng-click="vm.upvote({_id: vm.voteId})">
 			{{vm.vote}}
 		</span>
 	</div>
