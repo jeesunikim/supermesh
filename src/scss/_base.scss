@@ -1,0 +1,24 @@
+body{
+	background-color: $DefaultBG;
+}
+
+a {
+	text-decoration: none;
+	cursor: pointer;
+}
+
+ul, menu, dir {
+	padding: 0;
+	margin: 0;
+}
+
+.right {
+	right: 5px;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+}

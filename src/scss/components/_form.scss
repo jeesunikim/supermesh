@@ -1,25 +1,14 @@
 input[type="text"],[type="time"], [type="password"], textarea {
-	background-color: $White;
-	color: $Black;
+	background-color: $Transparent;
+	color: #C0BFBE;
 	cursor: text;
 	margin: 1.25em auto;
-	padding: 10px;
+	padding-left: 10px;
 	width: 194px;
 	height: 30px;
+	border: 1px solid;
 	outline: none;
-	-webkit-border-radius: 0;
-	-moz-border-radius: 0;
-	border: none;
 	display: block;
-}
-
-button[disabled] {
-	color: $LightGrey;
-}
-button[disabled]:hover {
-	background: $White;
-	border: 1px solid $White;
-	color: $LightGrey;
 }
 
 textarea {
@@ -51,11 +40,11 @@ textarea {
 .customBtn {
 	display: block;
 	height: 40px;
-	margin: 10px auto 20px auto;
-	background: $White;
-	border: 1px solid $White;
-	color: $PBdefault;
-	font-weight: bold;
+	margin: 0 auto;
+    margin-top: 10px;
+	background: $Default;
+	border: 1px solid $Default;
+	color: $Black;
 	outline: none;
 	cursor: pointer;
 	transition: all 0.3s ease;
@@ -71,8 +60,8 @@ textarea {
 	margin: 0 auto;
     margin-top: 10px;
 	background: transparent;
-	border: 1px solid $PBdefault;
-	color: $White;
+	border: 1px solid $Default;
+	color: $Default;
 	outline: none;
 	cursor: pointer;
 	transition: all 0.3s ease;
@@ -104,10 +93,16 @@ textarea {
   color:$NeonRed;
   font-size:1.2em;
 }
-
+// .uploadFile{
+//   display: block;
+//   margin: 0 auto;
+//   width:200px;
+//   height: 200px;
+// }
 .customBtn:hover {
+
 	background: transparent;
-	color: $White;
+	color: $Default;
 }
 
 button {
