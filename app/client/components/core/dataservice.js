@@ -11,7 +11,8 @@
     function dataservice($http, $location) {
         return {
             getIdeas: getIdeas,
-            eachIdea: eachIdea
+            eachIdea: eachIdea,
+            postIdeas: postIdeas
         };
 
         function getIdeas() {
@@ -42,7 +43,16 @@
                     $location.url('/');
                     console.log(error);
                 }
+        }
 
+        function postIdeas(newMessage) {
+            return $http.post('/api/message', newMessage)
+                .success(function (data) {
+                    console.log("Success" + data);
+                })
+                .error(function (data){
+                    console.log("Error: " + data);
+                })
         }
     }
 })();

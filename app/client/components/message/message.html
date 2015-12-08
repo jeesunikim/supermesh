@@ -6,11 +6,11 @@
 		<h2>Message</h2>
 	</div>
 	<div class="Message-form">
-	<form ng-submit='submitSession(session)'>
-		<input type='text' ng-model='message.name' placeholder='Title of your idea.'/>
-		<input type='text' ng-model='message.category' placeholder='Category. Ex. Library or School'/>
-		<textarea ng-model='message.desc' placeholder='Leave your suggestion idea or improvement'/></textarea>
-		<button type='submit' class="customBtn" ng-disabled="(!message.name)||(!message.category)||(!message.desc)">Submit</button>
+	<form ng-submit='vm.submit(vm.messages)'>
+		<input type='text' ng-model='vm.messages.name' placeholder='What can we improve on?'/>
+		<input type='text' ng-model='vm.messages.category' placeholder='Ex. Kitchen'/>
+		<textarea ng-model='vm.messages.message' placeholder='Leave your suggestion'/></textarea>
+		<button type='submit' class="customBtn" ng-disabled="(!vm.messages.name)||(!vm.messages.category)||(!vm.messages.message)">Submit</button>
 	</form>
 	</div>
 </div>

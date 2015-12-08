@@ -1,16 +1,12 @@
 <section class="Ideas">
 	<div class="Ideas-section">
-		{{vm.title}}
+		{{vm.idea.name}}
+		<span class="upvote glyphicon glyphicon-chevron-up" ng-model="vm.idea.upvote">
+			{{vm.idea.upvote}}
+		</span>
 	</div>
-	<ul class="Ideas-session">
-		<li ng-repeat="eachIdea in vm.idea">
-			<span>
-				{{eachIdea.message}}
-				<span class="category">{{eachIdea.category}}</span>
-			</span>
-			<span class="upvote glyphicon glyphicon-chevron-up">
-				{{eachIdea.upvote}}
-			</span>
-		</li>
+	<ul class="Ideas-detail">
+		<li>Category: {{vm.idea.category}}</li>
+		<li>Message: {{vm.idea.message}}</li>
 	</ul>
 </section>

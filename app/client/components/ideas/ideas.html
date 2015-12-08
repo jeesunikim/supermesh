@@ -3,7 +3,7 @@
 		{{vm.title}}
 	</div>
 	<ul class="Ideas-session">
-		<li ng-repeat="idea in vm.ideas">
+		<li ng-repeat="idea in vm.ideas" ui-sref="idea({id: idea._id})">
 			<span>
 				{{idea.name}}
 				<span class="category">{{idea.category}}</span>

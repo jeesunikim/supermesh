@@ -14,6 +14,12 @@
 
 			getIdeas();
 
+			function goToIdea(){
+				dataservice.getIdeas().then(function (data) {
+					$state.go('idea', {"id": res.data._id});
+				})
+			}
+
 			function getIdeas(){
 				return dataservice.getIdeas().then(function (data) {
 					vm.ideas = data;
