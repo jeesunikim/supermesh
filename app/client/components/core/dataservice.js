@@ -12,7 +12,8 @@
         return {
             getIdeas: getIdeas,
             eachIdea: eachIdea,
-            postIdeas: postIdeas
+            postIdeas: postIdeas,
+            updateVote: updateVote
         };
 
         function getIdeas() {
@@ -43,6 +44,12 @@
                     $location.url('/');
                     console.log(error);
                 }
+        }
+
+        function updateVote(vote) {
+            return $http.put('/message/' + vote._id + "/upvote").success(function(data){
+                vote.upvotes += 1;
+            });
         }
 
         function postIdeas(newMessage) {

@@ -7,16 +7,13 @@
 
 		function ideaDetailsCtrl($stateParams, $http, dataservice){
 			var vm = this;
-			vm.idea = [];
 			vm.vote = undefined;
 
 			$http({
-				url: '/api/message',
-				method: 'GET',
-				params: {id: $stateParams.id}
+				url: '/api/message/' + $stateParams.id,
+				method: 'GET'
 			}).then(function(res) {
-				vm.vote = res.data.vote;
-				console.log(vm.vote, "vote");
+				vm.vote = res.data.upvote;
 			});
 
 			getIdea($stateParams.id);
@@ -28,13 +25,10 @@
 				})
 			}
 
-			// function upvote(id){
-			// 	dataservice.eachIdea(id).then(function(data) {
-			// 		vm.vote = data.upvote;
-			// 		vm.vote++;
-			// 		console.log(vm.vote, "upvote");
-			// 	});
-			// }
+			console.log("hi");
 
+			vm.upvote = function(vote) {
+				return dataservice.updateVote(vote);
+			}
 		}
 })();

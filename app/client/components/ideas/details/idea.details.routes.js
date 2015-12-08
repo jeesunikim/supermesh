@@ -12,7 +12,7 @@
 			{
 				state: 'idea',
 				config: {
-					url: '/ideas/:id',
+					url: '/idea/:id',
 					controller: 'ideaDetailsCtrl',
 					controllerAs: 'vm',
 					templateUrl: 'app/client/components/ideas/details/idea.details.html'
