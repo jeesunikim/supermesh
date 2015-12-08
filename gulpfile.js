@@ -34,6 +34,7 @@ gulp.task('buildJS', ['lintJS'], function () {
         .pipe(angularFilesort())
         .pipe(plumber())
         .pipe(sourcemaps.init())
+        .pipe(uglify())
         .pipe(concat('main.js'))
         .pipe(sourcemaps.write())
         .pipe(gulp.dest('./dist/js'));
@@ -63,7 +64,7 @@ gulp.task('buildCSS', function () {
 gulp.task('watch', function () {
 
     livereload.listen();
-    
+
     gulp.watch('app/client/**/*.js', function () {
         runSeq('buildJS', 'reload');
     });
@@ -76,7 +77,7 @@ gulp.task('watch', function () {
         runSeq('buildCSS', 'reloadCSS');
     });
 
-    gulp.watch('app/server/**/*.js', ['lintJS']); 
+    gulp.watch('app/server/**/*.js', ['lintJS']);
 
 });
 

@@ -1,13 +1,26 @@
 'use strict';
 
-var chalk = require('chalk'),
-    app = require('./routes/configure/');
+var chalk = require('chalk');
+var startDb = require('./db');
+var app = require('./routes');
+var server = require('http').createServer(app);
 
-var server = require('http').createServer();
+var createApplication = new Promise(function(resolve, reject) {
+    server.on('request', function() {
+        resolve(app);
+    });
+    require('./io')(server); 
+});
 
-server.on('request', app); // Attach the Express Application
+var startServer = function() {
+    var PORT = process.env.PORT || 7777;
+    server.listen(PORT, function() {
+        console.log(chalk.blue('Server started on port', chalk.magenta(PORT)));
+    });
+};
 
-var port = 7777;
-server.listen(port, function() {
-    console.log(chalk.blue('Server started on port', chalk.magenta(port)));
+startDb.then(createApplication).then(startServer).catch(function(err) {
+    console.error('Initialization error:', chalk.red(err.message));
+    console.error('Process terminating . . .');
+    process.kill(1);
 });

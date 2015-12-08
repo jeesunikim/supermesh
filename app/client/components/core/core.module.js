@@ -1,8 +1,10 @@
 (function() {
-    'use strict';
+	'use strict';
 
-    angular
-    	.module('sm.core', [])
-    	.constant('FIREBASE_URI', 'https://luminous-inferno-640.firebaseio.com/');
-
+	angular
+		.module('sm.core', [
+			// 'blocks.router', 
+      'ui.router',
+      'sm.router'
+			]);
 })();

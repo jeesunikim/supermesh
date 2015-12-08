@@ -2,9 +2,7 @@
     'use strict';
 
     angular.module('sm', [
-
         'ui.router',
-        'firebase',
 
         /*
          * Order is not important.
@@ -21,16 +19,9 @@
          * Feature areas
          */
          
-        'sm.admin',
-        'sm.adminCreate',
-        'sm.cc',
-        'sm.chat',
-        'sm.session',
-        'sm.signin',
-        'sm.signup',
-        'sm.event',
-        'sm.participant',
-        'sm.signin'
+        'sm.ideas',
+        'sm.ideaDetails',
+        'sm.message'
     ]);
 
 })();

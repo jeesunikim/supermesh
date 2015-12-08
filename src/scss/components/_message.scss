@@ -1,0 +1,21 @@
+/* login */
+.Message {
+	margin: 0 1em;
+	position: relative;
+	&-svg {
+		text-align: center;
+	}
+	&-headline {
+		h2 {
+			font-size: $Subheadline;
+			color: $Default;
+			font-family: 'oswald', sans-serif;
+			text-align: center;
+			line-height: 2em;
+		}
+	}
+	&-form {
+		text-align:center;
+		font-family: $Lato;
+	}
+}

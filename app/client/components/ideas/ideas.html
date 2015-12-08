@@ -1,0 +1,16 @@
+<section class="Ideas">
+	<div class="Ideas-section">
+		{{vm.title}}
+	</div>
+	<ul class="Ideas-session">
+		<li ng-repeat="idea in vm.ideas">
+			<span>
+				{{idea.name}}
+				<span class="category">{{idea.category}}</span>
+			</span>
+			<span class="upvote glyphicon glyphicon-chevron-up">
+				{{idea.upvote}}
+			</span>
+		</li>
+	</ul>
+</section>
