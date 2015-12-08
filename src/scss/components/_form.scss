@@ -11,6 +11,7 @@ input[type="text"],[type="time"], [type="password"], textarea {
 	display: block;
 }
 
+
 textarea {
 	height: 180px;
 	resize: none;
@@ -23,10 +24,10 @@ textarea {
 }
 
 .inner-addon .glyphicon {
-  position: absolute;
-  padding: 10px;
-  pointer-events: none;
-  color: $Default;
+	position: absolute;
+	padding: 10px;
+	pointer-events: none;
+	color: $Default;
 }
 
 /* align icon */
@@ -41,7 +42,7 @@ textarea {
 	display: block;
 	height: 40px;
 	margin: 0 auto;
-    margin-top: 10px;
+	margin-top: 10px;
 	background: $Default;
 	border: 1px solid $Default;
 	color: $Black;
@@ -58,7 +59,7 @@ textarea {
 	display: block;
 	height: 40px;
 	margin: 0 auto;
-    margin-top: 10px;
+	margin-top: 10px;
 	background: transparent;
 	border: 1px solid $Default;
 	color: $Default;
@@ -77,34 +78,33 @@ textarea {
 }
 
 .fileDesc{
-  font-size:$Small;
-  color:$White;
-  margin: 0.5em 0;
-  text-align: center;
+	font-size:$Small;
+	color:$White;
+	margin: 0.5em 0;
+	text-align: center;
 
 }
 
 .filePreview{
-  display: block;
-  margin: 0 auto;
-  border: 1px solid $Black;
+	display: block;
+	margin: 0 auto;
+	border: 1px solid $Black;
 }
 .errorMsg{
-  color:$NeonRed;
-  font-size:1.2em;
+	color:$NeonRed;
+	font-size:1.2em;
 }
-// .uploadFile{
-//   display: block;
-//   margin: 0 auto;
-//   width:200px;
-//   height: 200px;
-// }
-.customBtn:hover {
 
+.customBtn:hover {
 	background: transparent;
 	color: $Default;
 }
 
-button {
-	text-transform: uppercase;
+button[disabled], button[disabled]:hover {
+	opacity: 0.5;
+	box-shadow: 0 3px 0px #304c6c;
+	color: #ffffff;
+	border-color: $LightGrey;
+	background: $LightGrey;
+	cursor: not-allowed;
 }
