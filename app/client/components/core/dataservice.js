@@ -47,9 +47,9 @@
         }
 
         function updateVote(vote) {
-            return $http.put('/api/message/' + vote._id + "/upvote").success(function(data){
-                vote.upvotes += 1;
-            });
+            return $http.put('/api/message/' + vote.idea._id + "/upvote").success(function(data){
+               vote.vote += 1;
+           });
         }
 
         function postIdeas(newMessage) {
