@@ -5,15 +5,21 @@
         .module('sm.message')
         .controller('messageCtrl', messageCtrl);
 
-    // messageCtrl.$inject = ['$scope','$state', '$rootScope'];
+    messageCtrl.$inject = ['$state', 'dataservice'];
 
-    function messageCtrl() {
+    function messageCtrl($state, dataservice) {
         var vm = this;
+
         vm.messages = {
             name: '',
             category: '',
-            message: '',
-            upvote: ''
+            message: ''
+        }
+
+        vm.submit = function (message) {
+            return dataservice.postIdeas(message).then(function (res){
+                  $state.go('idea', {"id": res.data._id});
+            });
         }
 
     }

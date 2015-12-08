@@ -12,6 +12,7 @@
 			margin: 4px 0 0 10px;
 			text-align: center;
 			position: absolute;
+			cursor: pointer;
 		}
 	}
 	&-session {
@@ -59,11 +60,6 @@
 			position: relative;
 			span {
 				cursor: pointer;
-			}
-			h2 {
-				font-size: $Subheadline;
-				color: $Default;
-				margin: 0;
 			}
 			span.category {
 				font-size: $Small;

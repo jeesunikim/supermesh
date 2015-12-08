@@ -15,7 +15,7 @@
 			config: {
 				url: '/',
 				controller: 'messageCtrl',
-				controllerAs: 'message',
+				controllerAs: 'vm',
 				templateUrl: 'app/client/components/message/message.html'
 			}
 		}
