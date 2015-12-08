@@ -1,11 +1,11 @@
 var bodyParser = require('body-parser'),
-	express = require('express'),
-	path = require('path'),
-	router = express.Router(),
-	logger = require('morgan'),
-	mongoose = require('mongoose'),
-	MessageModel = mongoose.model('Message'),
-	shortId = require('shortid');
+express = require('express'),
+path = require('path'),
+router = express.Router(),
+logger = require('morgan'),
+mongoose = require('mongoose'),
+MessageModel = mongoose.model('Message'),
+shortId = require('shortid');
 
 router.use(logger('dev'));
 router.use(bodyParser.json());
@@ -19,19 +19,24 @@ router.get('/message', function(req, res, next){
 			res.json(msgs);
 		}
 	})
-// res.send(msgs);
 });
+
 router.put('/message/:id/upvote', function(req, res, next) {
-   MessageModel.findById(req.params.id, function(err, msg) {
-        if (err) {
-          return handleError(err);
-        } else {
-           msg.upvotes(function(eachMsg){
-               res.json(eachMsg);
-           });
-        }
-    });
-  });
+	MessageModel.findById(req.params.id, function(err, msg) {
+		if (err) {
+			return handleError(err);
+		} else {
+			msg.upvotes(function(err, msg){
+				if (err) {
+					return handleError(err);
+				} else {
+					console.log(msg, "msg");
+					res.json(msg);
+				}
+			});
+		}
+	});
+});
 
 router.get('/message/:id', function(req, res, next){
 	MessageModel.findById(req.params.id, function(err, eachMsg) {

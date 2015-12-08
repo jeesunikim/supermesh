@@ -27,8 +27,6 @@
 				})
 			}
 
-			console.log("hi");
-
 			vm.upvote = function(vote) {
 				return dataservice.updateVote(vote);
 			}
