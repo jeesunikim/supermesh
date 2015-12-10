@@ -1,9 +1,6 @@
 'use strict';
 var mongoose = require('mongoose'),
-	shortid = require('shortid'),
-	db = require ('./index'),
-	User = mongoose.model('User');
-	require('./user');
+	shortid = require('shortid');
 
 var messageSchema = new mongoose.Schema({
 	_id: {

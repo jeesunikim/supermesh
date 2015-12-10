@@ -11,16 +11,6 @@ router.use(logger('dev'));
 router.use(bodyParser.json());
 router.use(bodyParser.urlencoded({ extended: false }));
 
-router.get('/message', function(req, res, next){
-	MessageModel.find({}, function(err, msgs){
-		if (err) {
-			return handleError(err);
-		}else{
-			res.json(msgs);
-		}
-	})
-});
-
 router.put('/message/:id/upvote', function(req, res, next) {
 	MessageModel.findById(req.params.id, function(err, msg) {
 		if (err) {

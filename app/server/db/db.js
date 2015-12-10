@@ -1,2 +1,2 @@
-require('./message');
 require('./user');
+require('./message');
