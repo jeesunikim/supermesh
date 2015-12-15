@@ -21,7 +21,8 @@
          
         'sm.ideas',
         'sm.ideaDetails',
-        'sm.message'
+        'sm.message',
+        'sm.login'
     ]);
 
 })();

@@ -13,7 +13,7 @@
 		{
 			state: 'message',
 			config: {
-				url: '/',
+				url: '/message',
 				controller: 'messageCtrl',
 				controllerAs: 'vm',
 				templateUrl: 'app/client/components/message/message.html'
