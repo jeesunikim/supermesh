@@ -13,12 +13,10 @@ router.use(bodyParser.json());
 router.use(bodyParser.urlencoded({ extended: false }));
 
 router.post('/login',
-	passport.authenticate('local', {
-		successRedirect: '/',
-		failureRedirect: '/signup'
+	passport.authenticate('local', { failureRedirect: '/signup'
+	}),	function(req,res){
+		res.redirect('/');
 	});
-);
-
 
 
 // router.put('/message/:id/upvote', function(req, res, next) {

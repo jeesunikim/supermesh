@@ -9,7 +9,7 @@ var userSchema = new mongoose.Schema({
 		unique: true,
 		default: shortid.generate
 	},
-	userName: {
+	username: {
 		type: String,
 		required: true
 	},
@@ -22,11 +22,11 @@ var userSchema = new mongoose.Schema({
 	}
 });
 
-var generateSalt = function () {
+function generateSalt() {
 	return crypto.randomBytes(16).toString('base64');
 };
 
-var encryptPWD = function(plainText, salt) { 
+function encryptPWD(plainText, salt) { 
 	var hash = crypto.createHash('sha1');
 	hash.update(plainText);
 	hash.update(salt);
