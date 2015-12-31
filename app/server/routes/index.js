@@ -2,19 +2,28 @@
 var path = require('path'),
 	express = require('express'),
 	session = require('express-session'),
+    passport = require('passport'),
     logger = require('morgan'),
     cookieParser = require('cookie-parser'),
     bodyParser = require('body-parser'),
     app = express();
 
-// require('./configure/parsing-middleware')(app);
+// require('../configure')(app);
 
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use('/api', require('./route'));
 app.use(cookieParser());
-app.use(session({secret: 'session secret key'}));
+
+// app.use(require(session)({
+//     secret: 'cat is the best',
+//     resave: false,
+//     saveUninitialized:  false
+// }));
+
+// app.use(passport.initialize());
+// app.use(passport.session());
 
 /* Static files path */
 var indexHtmlPath = path.join(__dirname, '../../client/index.html');
