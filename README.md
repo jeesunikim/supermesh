@@ -45,18 +45,11 @@ supermesh
 ```
 $ npm install
 ```
-
-2) run gulp
-```
-$ gulp
-```
-
-3) npm start
+2) npm start
 ```
 npm start
 ```
-
-4) Project should be on
+3) Project should be on
 ```
 http://localhost:7777/
 ```
