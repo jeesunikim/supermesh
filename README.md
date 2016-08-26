@@ -32,59 +32,31 @@ supermesh
     └── /vendor (library)
 ```
 
-## Models
+## Mongoose Model
 
-### Event Model
+### Supermesh Model
     - Name (String)
-    - Description (String)
-    - Logo (String)
-    - Theme hex color (String)
-    - Map (String)
-    - Schedule ref Session (Ref Mongoose Type)
-    - duration (Integer)
-    - time start (TIME)
-    - time end ( TIME)
-    - in progress (BOOL)
-    - numofparticip Integer)
-    - Organizer ( Ref Mongoose Type)
+    - Category (String)
+    - Message (String)
+    - Upvote (Number)
     
-    
-### Session
-    - Name( String)
-    - Description( String)
-    - Speakers (ref Mongoose Type)
-    - Time Start ( Unix time)
-    - Time End ( unix Time)
-    - Duration ( Int)
-    - Location (ref Mongoose Type)
-    - Messages (ref Mongoose Type)
-    - Participants ( ref Mongoose Type)
-    
-    
-### Speaker
-    - Name( String)
-    - Bio ( String)
-    - Session ref
-    - Photo
+## How to start the app
+1) npm install
+```
+$ npm install
+```
 
-### Organizer
-    - name ( String)
-    - phone_number ( String)
-    - photo ( String)
-    
-### Participant
-    - username ( String)
-    - phone_number ( String)
-    - banned  ( Bool)
-   
-### Location
-    - name ( String)
-    - coords( Mongoose coordinate)
-    - details ( String)
-    
-### Message
-    - upvotes ( Integer)
-    - content ( String)
-    - Participants (ref Mongoose model)
-    
-    
+2) run gulp
+```
+$ gulp
+```
+
+3) npm start
+```
+npm start
+```
+
+4) Project should be on
+```
+http://localhost:7777/
+```
