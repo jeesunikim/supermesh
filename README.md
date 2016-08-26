@@ -4,8 +4,8 @@
 ```
 supermesh
 ├── /app
-│   ├── /client (angular components / index.html)
-│   │       ├── /components
+│   ├── /client
+│   │       ├── /components (angular components)
 │   │       │           └── /blocks
 │   │       │                  └── /router
 │   │       │           ├── /core (shared files)
