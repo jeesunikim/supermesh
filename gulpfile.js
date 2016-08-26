@@ -6,6 +6,7 @@ var gulp = require('gulp'),
 	uglify = require('gulp-uglify'),
 	watch = require('gulp-watch'),
 	concat = require('gulp-concat'),
+    nodemon = require('gulp-nodemon'),
 	plumber = require('gulp-plumber'),
 	sourcemaps = require('gulp-sourcemaps'),
 	eslint = require('gulp-eslint'),
@@ -61,6 +62,15 @@ gulp.task('buildCSS', function () {
         .pipe(gulp.dest('./dist/css/'));
 });
 
+gulp.task('demon', function () {
+  nodemon({
+    script: 'app/server/start.js'
+  , ext: 'js html'
+  , env: { 'NODE_ENV': 'development' }
+  })
+})
+
+
 gulp.task('watch', function () {
 
     livereload.listen();
@@ -81,4 +91,4 @@ gulp.task('watch', function () {
 
 });
 
-gulp.task('default', ['lintJS', 'buildJS', 'vendorJS', 'buildCSS', 'watch']);
+gulp.task('default', ['lintJS', 'buildJS', 'vendorJS', 'buildCSS', 'demon', 'watch']);

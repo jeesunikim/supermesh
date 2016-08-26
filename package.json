@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "nodemon ./app/server/start.js"
+    "start": "gulp"
   },
   "dependencies": {
     "aws-sdk": "^2.2.4",
@@ -25,6 +25,7 @@
     "gulp-livereload": "^3.8.0",
     "gulp-minify-css": "^1.2.1",
     "gulp-plumber": "^1.0.1",
+    "gulp-nodemon": "^2.0.6",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^2.0.4",
     "gulp-sourcemaps": "^1.5.2",
